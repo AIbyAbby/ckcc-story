@@ -1,235 +1,24 @@
-<!DOCTYPE html>
-<html lang="zh-Hant" data-theme="light">
+<!doctype html>
+<html lang="zh-Hant-TW">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>里里有故事 X　樂齡友善處方箋｜地方文化與社區記憶網站</title>
-  <meta name="description" content="故事踏查、共學課程與社區行動為促進社會連結、心理支援與公共參與。新店崇光社區大學地方文化與社區記憶網站。">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./design/tokens.css">
-  <link rel="stylesheet" href="./design/base.css">
-  <link rel="stylesheet" href="./design/home.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>里里有故事 × 樂齡友善處方箋</title>
+<link rel="stylesheet" href="design/home-layout.css">
   <link rel="stylesheet" href="design/home-principles.css">
 </head>
-<body data-base="./">
-  <a class="skip-link" href="#main-content">跳至主要內容</a>
-
-  <header class="site-header site-header--nav-only">
-    <div class="container">
-      <nav id="site-nav" class="site-nav" aria-label="主導覽列">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="./index.html" aria-current="page">首頁</a></li>
-          <li><a class="nav-link" href="./origin/">源起</a></li>
-          <li><a class="nav-link" href="./map/">踏查地圖</a></li>
-          <li><a class="nav-link" href="./shishan/">獅頭山</a></li>
-          <li><a class="nav-link" href="./liugong/">瑠公圳</a></li>
-          <li><a class="nav-link" href="./dapinglin/">大坪林圳</a></li>
-          <li><a class="nav-link" href="./care/">人物與關懷</a></li>
-          <li><a class="nav-link" href="./stories/">全部故事</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div class="breadcrumb-bar">
-    <div class="container">
-      <nav class="breadcrumb" aria-label="目前位置">
-        <span class="breadcrumb__current" aria-current="page">首頁</span>
-      </nav>
-    </div>
-  </div>
-
-  <main id="main-content">
-    <!-- 第一屏：水圳路線作為主視覺與導覽入口 -->
-    <section class="home-hero" aria-labelledby="hero-title">
-      <div class="container">
-        <div class="home-hero__top">
-          <div>
-            <p class="home-hero__kicker">115 秋季班河川閱讀歷史成果</p>
-            <h1 id="hero-title" class="home-hero__title">里里有故事 X　樂齡友善處方箋</h1>
-            <p class="home-hero__desc">故事踏查、共學課程與社區行動為促進社會連結、心理支援與公共參與</p>
-          </div>
-          <div class="home-hero__quick">
-            <a class="action-btn action-btn--primary" href="./map/">前往踏查地圖</a>
-            <a class="action-btn" href="#units">瀏覽四大單元</a>
-          </div>
-        </div>
-
-        <div class="canal-toc" aria-label="水圳踏查路線導覽入口">
-          <div class="canal-toc__meta">
-            <span>起點：獅頭山麓</span>
-            <span class="canal-toc__endpoint">沿水路走讀 → 新店溪水緣地景</span>
-          </div>
-
-          <!-- 桌機版：水圳路線 SVG 描繪一次後靜止，串起各單元入口 -->
-          <div class="canal-desktop">
-            <svg class="canal-svg" viewBox="0 0 1120 200" aria-hidden="true">
-              <path class="canal-tributary" d="M 48 160 C 180 148, 290 115, 440 120 C 600 124, 720 80, 870 94 C 960 102, 1030 76, 1085 66" />
-              <path class="canal-path" d="M 48 144 C 165 142, 200 68, 315 72 C 430 76, 445 142, 560 138 C 675 134, 695 58, 810 62 C 925 66, 965 106, 1082 52" />
-              <circle class="canal-node-dot canal-node-dot--amber" cx="96" cy="136" r="6" />
-              <circle class="canal-node-dot" cx="315" cy="72" r="5" />
-              <circle class="canal-node-dot" cx="560" cy="138" r="5" />
-              <circle class="canal-node-dot" cx="810" cy="62" r="5" />
-              <circle class="canal-node-dot canal-node-dot--amber" cx="1032" cy="72" r="6" />
-            </svg>
-
-            <div class="canal-stations">
-              <a class="canal-station" href="./shishan/">
-                <span class="canal-station__head">
-                  <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                    <path class="unit-svg__main" d="M4 25 C7 18, 11 11, 17 8 C22 5, 26 11, 28 18 C29 22, 27 25, 22 26 C15 27, 8 27, 4 25 Z"/>
-                    <path class="unit-svg__main" d="M10 21 C12 17, 15 14, 18 13 C21 12, 23 15, 22 19 C22 21, 18 22, 14 22 C12 22, 9 22, 10 21 Z"/>
-                    <circle class="unit-svg__dot" cx="17" cy="17" r="2"/>
-                  </svg>
-                  <span class="canal-station__step">01</span>
-                </span>
-                <span class="canal-station__name">獅頭是火山 天機活潑</span>
-                <span class="canal-station__cta">進入獅頭山 →</span>
-              </a>
-
-              <a class="canal-station" href="./liugong/">
-                <span class="canal-station__head">
-                  <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                    <path class="unit-svg__main" d="M5 27 C10 22, 8 17, 15 15 C22 13, 20 8, 27 5"/>
-                    <path class="unit-svg__main" d="M6 12 C9 10, 11 10, 14 12"/>
-                    <path class="unit-svg__main" d="M18 22 C21 20, 24 20, 27 22"/>
-                    <circle class="unit-svg__dot" cx="15" cy="15" r="2"/>
-                  </svg>
-                  <span class="canal-station__step">02</span>
-                </span>
-                <span class="canal-station__name">瑠公圳漫步</span>
-                <span class="canal-station__cta">進入瑠公圳 →</span>
-              </a>
-
-              <a class="canal-station" href="./dapinglin/">
-                <span class="canal-station__head">
-                  <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                    <path class="unit-svg__main" d="M16 28 L16 17"/>
-                    <path class="unit-svg__main" d="M16 17 C16 13, 10 10, 6 5"/>
-                    <path class="unit-svg__main" d="M16 17 C16 13, 22 10, 26 5"/>
-                    <circle class="unit-svg__dot" cx="16" cy="17" r="2.2"/>
-                  </svg>
-                  <span class="canal-station__step">03</span>
-                </span>
-                <span class="canal-station__name">圳水川流 孕育大地</span>
-                <span class="canal-station__cta">進入大坪林圳 →</span>
-              </a>
-
-              <a class="canal-station" href="./care/">
-                <span class="canal-station__head">
-                  <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                    <path class="unit-svg__main" d="M6 22 C4 14, 9 7, 17 7 C22 7, 26 11, 26 16 C25 22, 20 26, 14 25"/>
-                    <path class="unit-svg__main" d="M26 10 C28 18, 23 25, 15 25 C10 25, 6 21, 6 16 C7 10, 12 6, 18 7"/>
-                    <circle class="unit-svg__dot" cx="16" cy="16" r="2"/>
-                  </svg>
-                  <span class="canal-station__step">04</span>
-                </span>
-                <span class="canal-station__name">彼此相顧 激發愛心</span>
-                <span class="canal-station__cta">進入人物與關懷 →</span>
-              </a>
-
-              <a class="canal-station" href="./map/">
-                <span class="canal-station__head">
-                  <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                    <path class="unit-svg__main" d="M5 26 C10 24, 12 20, 16 19 C20 18, 22 21, 27 19"/>
-                    <path class="unit-svg__main" d="M16 18 C16 18, 11 13, 11 9 C11 6, 13 4, 16 4 C19 4, 21 6, 21 9 C21 13, 16 18, 16 18 Z"/>
-                    <circle class="unit-svg__dot" cx="16" cy="9" r="2"/>
-                  </svg>
-                  <span class="canal-station__step">05</span>
-                </span>
-                <span class="canal-station__name">源起與踏查地圖</span>
-                <span class="canal-station__cta">開啟踏查地圖 →</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- 手機版：垂直水路入口 -->
-          <div class="canal-mobile">
-            <a class="canal-mobile__item" href="./shishan/">
-              <span class="canal-mobile__left">
-                <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                  <path class="unit-svg__main" d="M4 25 C7 18, 11 11, 17 8 C22 5, 26 11, 28 18 C29 22, 27 25, 22 26 C15 27, 8 27, 4 25 Z"/>
-                  <path class="unit-svg__main" d="M10 21 C12 17, 15 14, 18 13 C21 12, 23 15, 22 19 C22 21, 18 22, 14 22 C12 22, 9 22, 10 21 Z"/>
-                  <circle class="unit-svg__dot" cx="17" cy="17" r="2"/>
-                </svg>
-                <span>
-                  <span class="canal-mobile__title">獅頭是火山 天機活潑</span>
-                  <span class="canal-mobile__sub">獅頭山走讀單元</span>
-                </span>
-              </span>
-              <span class="canal-mobile__arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="canal-mobile__item" href="./liugong/">
-              <span class="canal-mobile__left">
-                <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                  <path class="unit-svg__main" d="M5 27 C10 22, 8 17, 15 15 C22 13, 20 8, 27 5"/>
-                  <path class="unit-svg__main" d="M6 12 C9 10, 11 10, 14 12"/>
-                  <path class="unit-svg__main" d="M18 22 C21 20, 24 20, 27 22"/>
-                  <circle class="unit-svg__dot" cx="15" cy="15" r="2"/>
-                </svg>
-                <span>
-                  <span class="canal-mobile__title">瑠公圳漫步</span>
-                  <span class="canal-mobile__sub">瑠公圳走讀單元</span>
-                </span>
-              </span>
-              <span class="canal-mobile__arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="canal-mobile__item" href="./dapinglin/">
-              <span class="canal-mobile__left">
-                <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                  <path class="unit-svg__main" d="M16 28 L16 17"/>
-                  <path class="unit-svg__main" d="M16 17 C16 13, 10 10, 6 5"/>
-                  <path class="unit-svg__main" d="M16 17 C16 13, 22 10, 26 5"/>
-                  <circle class="unit-svg__dot" cx="16" cy="17" r="2.2"/>
-                </svg>
-                <span>
-                  <span class="canal-mobile__title">圳水川流 孕育大地</span>
-                  <span class="canal-mobile__sub">大坪林圳單元</span>
-                </span>
-              </span>
-              <span class="canal-mobile__arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="canal-mobile__item" href="./care/">
-              <span class="canal-mobile__left">
-                <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                  <path class="unit-svg__main" d="M6 22 C4 14, 9 7, 17 7 C22 7, 26 11, 26 16 C25 22, 20 26, 14 25"/>
-                  <path class="unit-svg__main" d="M26 10 C28 18, 23 25, 15 25 C10 25, 6 21, 6 16 C7 10, 12 6, 18 7"/>
-                  <circle class="unit-svg__dot" cx="16" cy="16" r="2"/>
-                </svg>
-                <span>
-                  <span class="canal-mobile__title">彼此相顧 激發愛心</span>
-                  <span class="canal-mobile__sub">人物與關懷單元</span>
-                </span>
-              </span>
-              <span class="canal-mobile__arrow" aria-hidden="true">→</span>
-            </a>
-
-            <a class="canal-mobile__item" href="./map/">
-              <span class="canal-mobile__left">
-                <svg class="unit-svg" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-                  <path class="unit-svg__main" d="M5 26 C10 24, 12 20, 16 19 C20 18, 22 21, 27 19"/>
-                  <path class="unit-svg__main" d="M16 18 C16 18, 11 13, 11 9 C11 6, 13 4, 16 4 C19 4, 21 6, 21 9 C21 13, 16 18, 16 18 Z"/>
-                  <circle class="unit-svg__dot" cx="16" cy="9" r="2"/>
-                </svg>
-                <span>
-                  <span class="canal-mobile__title">源起與踏查地圖</span>
-                  <span class="canal-mobile__sub">路線地圖與站點總覽</span>
-                </span>
-              </span>
-              <span class="canal-mobile__arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 各單元入口 -->
-    <section class="container home-principles" aria-label="計畫理念">
+<body>
+<header><div class="header wrap">
+<a class="brand" href="index.html">里里有故事</a>
+<nav class="nav-main" aria-label="主選單"><a href="index.html" aria-current="page">首頁</a><details name="desktop-section"><summary>社區盤點與實地踏查</summary><div class="submenu"><a href="origin/index.html">源起</a><a href="map/index.html">踏查地圖</a></div></details><details name="desktop-section"><summary>獅頭是火山 天機活潑</summary><div class="submenu"><a href="shishan/index.html">查看單元｜獅頭是火山 天機活潑</a><a href="stories/2026-09-24-lion-head-hill/index.html">新店小獅頭山走讀</a><a href="stories/2026-09-24-cliff-buddha/index.html">獅山腰的大佛</a><a href="stories/2026-09-24-guangming-temple/index.html">廣明禪寺</a><a href="stories/2026-09-24-binlangkeng-creek/index.html">檳榔坑溪</a><a href="stories/guangqin-monk-path/index.html">廣欽老和尚修行路</a></div></details><details name="desktop-section"><summary>瑠公圳漫步</summary><div class="submenu"><a href="liugong/index.html">查看單元｜瑠公圳漫步</a><a href="stories/2026-10-01-liugong-lixing-settlement/index.html">瑠公圳力行聚落踏查紀錄</a><a href="stories/2026-10-01-liugong-canal-walk/index.html">瑠公圳漫步</a><a href="stories/2026-10-01-liugong-field-notes/index.html">瑠公圳走讀</a></div></details><details name="desktop-section"><summary>圳水川流 孕育大地</summary><div class="submenu"><a href="dapinglin/index.html">查看單元｜圳水川流 孕育大地</a><a href="stories/2026-10-08-dapinglin-east-west-canals/index.html">大坪林圳東西幹線</a></div></details><details name="desktop-section"><summary>彼此相顧 激發愛心</summary><div class="submenu"><a href="care/index.html">查看單元｜彼此相顧 激發愛心</a><a href="stories/2026-10-31-spiritual-cartographer/index.html">靈性製圖師的25年軌跡</a><a href="https://sites.google.com/ckccckgsh.com.tw/oursurvey/%E5%BD%BC%E6%AD%A4%E7%9B%B8%E9%A1%A7-%E6%BF%80%E7%99%BC%E6%84%9B%E5%BF%83/%E5%BE%B7%E8%8F%AF%E5%A5%B3%E5%AD%90%E5%85%AC%E5%AF%93">德華女子公寓</a><a href="stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/index.html">在歲月裂縫中種植光明：從聖三堂到德華女子公寓</a></div></details></nav>
+<details class="mobile-menu"><summary>選單</summary><nav aria-label="手機主選單"><a href="index.html" aria-current="page">首頁</a><details name="mobile-section"><summary>社區盤點與實地踏查</summary><div class="submenu"><a href="origin/index.html">源起</a><a href="map/index.html">踏查地圖</a></div></details><details name="mobile-section"><summary>獅頭是火山 天機活潑</summary><div class="submenu"><a href="shishan/index.html">查看單元｜獅頭是火山 天機活潑</a><a href="stories/2026-09-24-lion-head-hill/index.html">新店小獅頭山走讀</a><a href="stories/2026-09-24-cliff-buddha/index.html">獅山腰的大佛</a><a href="stories/2026-09-24-guangming-temple/index.html">廣明禪寺</a><a href="stories/2026-09-24-binlangkeng-creek/index.html">檳榔坑溪</a><a href="stories/guangqin-monk-path/index.html">廣欽老和尚修行路</a></div></details><details name="mobile-section"><summary>瑠公圳漫步</summary><div class="submenu"><a href="liugong/index.html">查看單元｜瑠公圳漫步</a><a href="stories/2026-10-01-liugong-lixing-settlement/index.html">瑠公圳力行聚落踏查紀錄</a><a href="stories/2026-10-01-liugong-canal-walk/index.html">瑠公圳漫步</a><a href="stories/2026-10-01-liugong-field-notes/index.html">瑠公圳走讀</a></div></details><details name="mobile-section"><summary>圳水川流 孕育大地</summary><div class="submenu"><a href="dapinglin/index.html">查看單元｜圳水川流 孕育大地</a><a href="stories/2026-10-08-dapinglin-east-west-canals/index.html">大坪林圳東西幹線</a></div></details><details name="mobile-section"><summary>彼此相顧 激發愛心</summary><div class="submenu"><a href="care/index.html">查看單元｜彼此相顧 激發愛心</a><a href="stories/2026-10-31-spiritual-cartographer/index.html">靈性製圖師的25年軌跡</a><a href="https://sites.google.com/ckccckgsh.com.tw/oursurvey/%E5%BD%BC%E6%AD%A4%E7%9B%B8%E9%A1%A7-%E6%BF%80%E7%99%BC%E6%84%9B%E5%BF%83/%E5%BE%B7%E8%8F%AF%E5%A5%B3%E5%AD%90%E5%85%AC%E5%AF%93">德華女子公寓</a><a href="stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/index.html">在歲月裂縫中種植光明：從聖三堂到德華女子公寓</a></div></details></nav></details>
+</div>
+</header>
+<section class="home-banner" aria-labelledby="home-title"><div class="banner-title wrap">
+<h1 id="home-title">里里有故事 <span aria-hidden="true">×</span><br>樂齡友善處方箋</h1>
+</div></section>
+<main class="wrap" id="main">
+    <section class="home-principles" aria-label="計畫理念">
       <div class="home-principles__grid">
         <figure>
           <img src="images/home-principles/01-social-connection-stairs.webp" width="1024" height="955" alt="走讀成員沿山坡階梯下行" loading="lazy" decoding="async">
@@ -250,241 +39,55 @@
       </div>
     </section>
 
-    <section id="units" class="home-section" aria-labelledby="units-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">依主題瀏覽</p>
-            <h2 id="units-title" class="section-title">各單元入口</h2>
-          </div>
-          <a class="section-more" href="./stories/">前往全部故事 →</a>
-        </div>
+<section class="home-introduction" aria-label="網站引言">
+<div>
+<p class="intro">沿著新店溪走，從水岸轉進街巷，再往獅頭山麓去。到了瑠公圳和大坪林圳，順著水曾經流過的地方看，聚落的往事也一點一點浮現。有人記得山腰的大佛，有人循著圳道尋訪老聚落。翻開這些走讀紀錄，還能讀到水路之外，街坊之間彼此照應的日常。</p>
+<div class="actions"><a class="button primary" href="#units">選一個走讀單元</a><a class="button" href="./map/index.html">看踏查地圖</a></div>
+</div>
+</section>
 
-        <div class="unit-index">
-          <article id="unit-shishan" class="unit-row">
-            <div>
-              <svg class="unit-svg unit-row__icon-lg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
-                <path class="unit-svg__main" d="M18 124 C28 96, 48 64, 78 44 C104 28, 126 52, 138 86 C144 102, 144 118, 132 128 C108 136, 46 138, 18 124 Z"/>
-                <path class="unit-svg__main" d="M36 114 C44 92, 60 68, 82 54 C102 42, 118 62, 124 88 C128 102, 120 116, 102 120 C78 124, 52 122, 36 114 Z"/>
-                <path class="unit-svg__main" d="M54 103 C60 88, 72 72, 86 64 C98 58, 108 72, 110 88 C111 100, 100 107, 86 108 C72 109, 60 108, 54 103 Z"/>
-                <path class="unit-svg__main" d="M72 91 C75 82, 82 76, 89 75 C96 74, 99 82, 97 90 C95 96, 86 98, 79 97 C75 96, 71 94, 72 91 Z"/>
-                <circle class="unit-svg__dot" cx="87" cy="85" r="4"/>
-              </svg>
-              <svg class="unit-svg unit-row__icon-md" width="96" height="96" viewBox="0 0 96 96" aria-hidden="true">
-                <path class="unit-svg__main" d="M11 74 C18 56, 30 38, 48 26 C64 16, 76 32, 83 52 C87 62, 86 72, 79 77 C64 82, 28 83, 11 74 Z"/>
-                <path class="unit-svg__main" d="M24 67 C30 53, 39 40, 51 34 C62 28, 70 40, 72 54 C74 63, 68 69, 57 71 C44 73, 31 71, 24 67 Z"/>
-                <path class="unit-svg__main" d="M38 59 C42 50, 48 44, 54 42 C61 40, 64 48, 63 55 C62 61, 54 63, 47 62 C42 62, 37 61, 38 59 Z"/>
-                <circle class="unit-svg__dot" cx="52" cy="52" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="unit-row__title"><a href="./shishan/">獅頭是火山 天機活潑（獅頭山）</a></h3>
-              <p class="unit-row__desc">走訪新店小獅頭山、廣明禪寺、廣照禪寺大佛、檳榔坑溪、昆塞特小屋、振山煤礦與廣欽老和尚修行路。</p>
-            </div>
-            <a class="action-btn" href="./shishan/">進入單元 →</a>
-          </article>
+<section class="stories" id="units" aria-labelledby="units-title">
+<h2 id="units-title">四個走讀單元</h2>
+<div class="cards"><article class="card">
+<img src="images/unit-covers/unit-1-shishan.webp" alt="">
+<div class="copy">
+<h3><a href="shishan/index.html">獅頭是火山 天機活潑</a></h3>
 
-          <article id="unit-liugong" class="unit-row">
-            <div>
-              <svg class="unit-svg unit-row__icon-lg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
-                <path class="unit-svg__main" d="M24 134 C46 114, 34 88, 64 78 C96 68, 86 42, 116 32 C128 28, 138 26, 144 26"/>
-                <path class="unit-svg__main" d="M38 140 C58 120, 48 98, 76 89 C108 79, 98 54, 128 44 C136 41, 142 40, 146 40"/>
-                <path class="unit-svg__main" d="M26 70 C36 65, 44 65, 54 70"/>
-                <path class="unit-svg__main" d="M102 98 C112 93, 122 93, 132 98"/>
-                <path class="unit-svg__main" d="M108 110 C116 106, 124 106, 132 110"/>
-                <circle class="unit-svg__dot" cx="70" cy="83" r="4"/>
-              </svg>
-              <svg class="unit-svg unit-row__icon-md" width="96" height="96" viewBox="0 0 96 96" aria-hidden="true">
-                <path class="unit-svg__main" d="M14 80 C28 68, 22 52, 40 46 C58 40, 54 24, 72 18 C78 16, 83 15, 86 15"/>
-                <path class="unit-svg__main" d="M24 84 C36 72, 32 58, 48 53 C66 47, 62 32, 80 26 C83 25, 86 24, 88 24"/>
-                <path class="unit-svg__main" d="M16 42 C22 39, 28 39, 34 42"/>
-                <path class="unit-svg__main" d="M62 60 C68 57, 74 57, 80 60"/>
-                <circle class="unit-svg__dot" cx="44" cy="49" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="unit-row__title"><a href="./liugong/">瑠公圳漫步（瑠公圳）</a></h3>
-              <p class="unit-row__desc">自碧潭引水原址、萬善同歸碑與蔡金木宅，走進力行路聚落、過水橋與居民口述生活記憶。</p>
-            </div>
-            <a class="action-btn" href="./liugong/">進入單元 →</a>
-          </article>
+<p class="summary">從新店捷運站走到獅頭山腳，沿途看山腰大佛、檳榔坑溪與煤礦遺跡。</p>
+<span class="read">查看單元</span>
+</div></article>
+<article class="card">
+<img src="images/unit-covers/unit-2-liugong.webp" alt="">
+<div class="copy">
+<h3><a href="liugong/index.html">瑠公圳漫步</a></h3>
 
-          <article id="unit-dapinglin" class="unit-row">
-            <div>
-              <svg class="unit-svg unit-row__icon-lg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
-                <path class="unit-svg__main" d="M80 138 L80 86"/>
-                <path class="unit-svg__main" d="M80 86 C80 68, 52 58, 34 32"/>
-                <path class="unit-svg__main" d="M80 86 C80 68, 108 58, 126 32"/>
-                <path class="unit-svg__main" d="M66 130 L66 92 C66 78, 48 66, 26 42"/>
-                <path class="unit-svg__main" d="M94 130 L94 92 C94 78, 112 66, 134 42"/>
-                <circle class="unit-svg__dot" cx="80" cy="86" r="4.5"/>
-              </svg>
-              <svg class="unit-svg unit-row__icon-md" width="96" height="96" viewBox="0 0 96 96" aria-hidden="true">
-                <path class="unit-svg__main" d="M48 82 L48 52"/>
-                <path class="unit-svg__main" d="M48 52 C48 41, 31 35, 20 18"/>
-                <path class="unit-svg__main" d="M48 52 C48 41, 65 35, 76 18"/>
-                <path class="unit-svg__main" d="M39 78 L39 55 C39 46, 27 39, 15 24"/>
-                <path class="unit-svg__main" d="M57 78 L57 55 C57 46, 69 39, 81 24"/>
-                <circle class="unit-svg__dot" cx="48" cy="52" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="unit-row__title"><a href="./dapinglin/">圳水川流 孕育大地（大坪林圳）</a></h3>
-              <p class="unit-row__desc">梳理大坪林圳引水石硿歷史、東西幹線引水至排水路徑，以及大坪林五庄土地公廟脈絡。</p>
-            </div>
-            <a class="action-btn" href="./dapinglin/">進入單元 →</a>
-          </article>
+<p class="summary">從瑠公圳頭走向力行聚落，讀圳邊人家的生活記憶。</p>
+<span class="read">查看單元</span>
+</div></article>
+<article class="card">
+<img src="images/unit-covers/unit-3-dapinglin.webp" alt="">
+<div class="copy">
+<h3><a href="dapinglin/index.html">圳水川流 孕育大地</a></h3>
 
-          <article id="unit-care" class="unit-row">
-            <div>
-              <svg class="unit-svg unit-row__icon-lg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
-                <path class="unit-svg__main" d="M28 110 C22 72, 46 36, 84 36 C112 36, 130 56, 128 82 C126 108, 100 128, 70 126"/>
-                <path class="unit-svg__main" d="M132 50 C138 88, 114 124, 76 124 C48 124, 30 104, 32 78 C34 52, 60 32, 90 34"/>
-                <circle class="unit-svg__dot" cx="80" cy="80" r="4.5"/>
-              </svg>
-              <svg class="unit-svg unit-row__icon-md" width="96" height="96" viewBox="0 0 96 96" aria-hidden="true">
-                <path class="unit-svg__main" d="M17 66 C13 43, 28 22, 50 22 C67 22, 78 34, 77 49 C76 65, 60 77, 42 76"/>
-                <path class="unit-svg__main" d="M79 30 C83 53, 68 74, 46 74 C29 74, 18 62, 19 47 C20 31, 36 19, 54 20"/>
-                <circle class="unit-svg__dot" cx="48" cy="48" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="unit-row__title"><a href="./care/">彼此相顧 激發愛心（人物與關懷）</a></h3>
-              <p class="unit-row__desc">從聖三堂到德華女子公寓，閱讀 1960 年代女工避風港故事與紀實影片《靈性製圖師的25年軌跡》。</p>
-            </div>
-            <a class="action-btn" href="./care/">進入單元 →</a>
-          </article>
+<p class="summary">循著大坪林圳的支線，聽耆老談農耕、水圳與生活。</p>
+<span class="read">查看單元</span>
+</div></article>
+<article class="card">
+<img src="images/unit-covers/unit-4-love.webp" alt="">
+<div class="copy">
+<h3><a href="care/index.html">彼此相顧 激發愛心</a></h3>
 
-          <article id="unit-map" class="unit-row">
-            <div>
-              <svg class="unit-svg unit-row__icon-lg" width="160" height="160" viewBox="0 0 160 160" aria-hidden="true">
-                <path class="unit-svg__main" d="M26 124 C48 118, 56 96, 78 92 C98 88, 108 102, 134 94"/>
-                <path class="unit-svg__main" d="M78 86 C78 86, 56 64, 56 48 C56 36, 66 26, 78 26 C90 26, 100 36, 100 48 C100 64, 78 86, 78 86 Z"/>
-                <path class="unit-svg__main" d="M24 136 L136 136"/>
-                <circle class="unit-svg__dot" cx="78" cy="48" r="4.5"/>
-              </svg>
-              <svg class="unit-svg unit-row__icon-md" width="96" height="96" viewBox="0 0 96 96" aria-hidden="true">
-                <path class="unit-svg__main" d="M16 74 C29 70, 34 57, 48 55 C60 53, 66 61, 80 56"/>
-                <path class="unit-svg__main" d="M48 52 C48 52, 34 38, 34 28 C34 20, 40 14, 48 14 C56 14, 62 20, 62 28 C62 38, 48 52, 48 52 Z"/>
-                <path class="unit-svg__main" d="M14 82 L82 82"/>
-                <circle class="unit-svg__dot" cx="48" cy="28" r="3"/>
-              </svg>
-            </div>
-            <div>
-              <h3 class="unit-row__title"><a href="./map/">源起與踏查地圖</a></h3>
-              <p class="unit-row__desc">瀏覽四條走讀路線的踏查地圖站點，並可從地圖直接前往對應的故事文章。</p>
-            </div>
-            <a class="action-btn" href="./map/">開啟地圖</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- 最新文章 -->
-    <section class="home-section" aria-labelledby="latest-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">依時間瀏覽</p>
-            <h2 id="latest-title" class="section-title">最新文章</h2>
-          </div>
-          <a class="section-more" href="./stories/">查看全部文章與篩選 →</a>
-        </div>
-
-        <ul class="story-list">
-          <li class="story-item">
-            <span class="story-item__date">2026-09-24</span>
-            <h3 class="story-item__title">
-              <a href="./shishan/">新店小獅頭山走讀</a>
-            </h3>
-            <span class="story-item__meta">文：盧淑・獅頭是火山 天機活潑</span>
-          </li>
-          <li class="story-item">
-            <span class="story-item__date">2026-10-31</span>
-            <h3 class="story-item__title"><a href="./stories/2026-10-31-spiritual-cartographer/">靈性製圖師的25年軌跡（影片）</a></h3>
-            <span class="story-item__meta">文：侯淑敏・彼此相顧 激發愛心</span>
-          </li>
-          <li class="story-item">
-            <span class="story-item__date">—</span>
-            <h3 class="story-item__title"><a href="./stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/">在歲月裂縫中種植光明：從聖三堂到德華女子公寓</a></h3>
-            <span class="story-item__meta">文：侯淑敏・彼此相顧 激發愛心</span>
-          </li>
-          <li class="story-item">
-            <span class="story-item__date">2026-10-01</span>
-            <h3 class="story-item__title"><a href="./stories/2026-10-01-liugong-lixing-settlement/">瑠公圳力行聚落踏查紀錄</a></h3>
-            <span class="story-item__meta">文：張美枝・瑠公圳漫步</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- 計畫簡介與三個重點 -->
-    <section class="home-section" aria-labelledby="about-title">
-      <div class="container">
-        <div class="section-header">
-          <div>
-            <p class="section-label">認識這個計畫</p>
-            <h2 id="about-title" class="section-title">計畫簡介</h2>
-          </div>
-          <a class="section-more" href="./origin/">閱讀完整源起 →</a>
-        </div>
-
-        <div class="plan-grid">
-          <div class="plan-intro">
-            <p>
-              本網站整理新店崇光社區大學 115 秋季班河川閱讀課程的實地踏查與訪談成果，讓長輩、志工與社區居民都能輕鬆搜尋、瀏覽路線地圖，並將家鄉記憶分享給家人朋友。
-            </p>
-            <p>
-              全站文章皆以志工原始文稿為準，保留現場紀錄與地名脈絡。
-            </p>
-          </div>
-
-          <ul class="key-points-list">
-            <li>
-              <span class="key-point__num">01</span>
-              <p class="key-point__text">記憶作為療癒的處方，找回地方流失記憶：如聚落的拓墾歷史、族群遷徙，以及宗教信仰</p>
-            </li>
-            <li>
-              <span class="key-point__num">02</span>
-              <p class="key-point__text">以新店溪流域與水圳系統的水緣地景為骨幹，串聯起農業生產與都市發展的變遷</p>
-            </li>
-            <li>
-              <span class="key-point__num">03</span>
-              <p class="key-point__text">透過志工田野踏查與訪談，將老居民口中碎裂的記憶進行採集</p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-    <section class="container" aria-labelledby="volunteers-title">
+<p class="summary">走向聖三堂，也透過影片與文章認識地方的人和照顧的故事。</p>
+<span class="read">查看單元</span>
+</div></article></div>
+</section>
+    <section aria-labelledby="volunteers-title">
       <div class="volunteer-card">
         <h2 id="volunteers-title">撰稿志工</h2>
         <p>盧淑、賴玉芳、王淑美、尤素秋、張美枝、侯淑敏</p>
         <p>帶隊指導：高淑華老師</p>
       </div>
     </section>
-  </main>
-
-  <button id="back-to-top" class="back-to-top" type="button" hidden aria-label="回到頁面頂部">回到頂部 ↑</button>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-col--nav">
-        <p class="footer-heading">網站導覽</p>
-        <ul class="footer-nav-list">
-          <li><a href="./index.html">首頁</a></li>
-          <li><a href="./origin/">源起</a></li>
-          <li><a href="./map/">踏查地圖</a></li>
-          <li><a href="./shishan/">獅頭山</a></li>
-          <li><a href="./liugong/">瑠公圳</a></li>
-          <li><a href="./dapinglin/">大坪林圳</a></li>
-          <li><a href="./care/">人物與關懷</a></li>
-          <li><a href="./stories/">全部故事</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./scripts/ui.js"></script>
-</body>
-</html>
+</main>
+<footer class="wrap footer"><a href="index.html">回到首頁</a></footer>
+</body></html>
