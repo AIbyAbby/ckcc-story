@@ -1,0 +1,37 @@
+.home-principles {
+  padding-block: clamp(24px, 4vw, 48px);
+}
+
+.home-principles__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(16px, 2vw, 28px);
+}
+
+.home-principles figure {
+  margin: 0;
+}
+
+.home-principles img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home-principles figcaption {
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .home-principles__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .home-principles__grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
