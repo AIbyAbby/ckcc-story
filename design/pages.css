@@ -443,3 +443,21 @@
   font-size: var(--text-ui);
   margin-bottom: 6px;
 }
+.origin-actions {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  max-width: 100%;
+}
+
+.origin-actions .action-btn {
+  border-radius: 8px;
+  white-space: normal;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .origin-actions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
