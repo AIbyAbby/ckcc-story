@@ -378,6 +378,24 @@ a:hover {
   display: block;
 }
 
+.site-header--nav-only .site-nav {
+  display: block;
+  border-top: 0;
+  padding-block: 4px;
+}
+
+@media (max-width: 959px) {
+  .site-header--nav-only .nav-list {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 3px;
+  }
+
+  .site-header--nav-only .nav-link {
+    white-space: nowrap;
+  }
+}
+
 .nav-list {
   list-style: none;
   margin: 0;

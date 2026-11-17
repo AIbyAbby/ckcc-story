@@ -489,3 +489,22 @@
   color: var(--ink-primary);
   max-width: var(--prose-max-ch);
 }
+.volunteer-card {
+  margin-block-start: var(--space-6);
+  padding: clamp(20px, 4vw, 32px);
+  border: 1px solid var(--line-hairline);
+  background: var(--bg-surface);
+}
+
+.volunteer-card h2 {
+  font-size: var(--text-h2);
+  margin: 0 0 var(--space-3);
+}
+
+.volunteer-card p {
+  margin: 0;
+}
+
+.volunteer-card p + p {
+  margin-top: var(--space-2);
+}
