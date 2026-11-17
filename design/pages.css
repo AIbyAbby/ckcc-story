@@ -436,12 +436,27 @@
 .mymaps-item {
   border: 1px solid var(--line-hairline);
   background: var(--bg-surface);
-  padding: var(--space-4);
+  border-radius: 8px;
+  padding: clamp(16px, 3vw, 28px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .mymaps-item h3 {
-  font-size: var(--text-ui);
-  margin-bottom: 6px;
+  font-size: var(--text-h3);
+  margin: 0;
+}
+
+.mymaps-item p {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.mymaps-item .action-btn {
+  align-self: flex-start;
+  margin-top: auto;
+  border-radius: 8px;
 }
 .origin-actions {
   display: inline-grid;

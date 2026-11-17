@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>踏查地圖｜里里有故事 X　樂齡友善處方箋</title>
-  <meta name="description" content="互動式新店小獅頭山、瑠公圳、大坪林圳與聖三堂踏查站點地圖，可從地圖直接連結至故事文章。">
+  <meta name="description" content="依課程順序瀏覽四條實地踏查路線，開啟 Google My Maps 查看地圖。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="../design/base.css">
   <link rel="stylesheet" href="../design/pages.css">
   <link rel="stylesheet" href="../design/article.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
 </head>
 <body data-base="../">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
@@ -44,57 +43,11 @@
     <section class="page-hero" aria-labelledby="map-title">
       <div class="container">
         <div class="page-hero__inner">
-          <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" class="unit-svg" aria-hidden="true">
-  <path class="unit-svg__main" d="M16 74 C29 70, 34 57, 48 55 C60 53, 66 61, 80 56"/>
-  <path class="unit-svg__main" d="M48 52 C48 52, 34 38, 34 28 C34 20, 40 14, 48 14 C56 14, 62 20, 62 28 C62 38, 48 52, 48 52 Z"/>
-  <path class="unit-svg__main" d="M14 82 L82 82"/>
-  <circle class="unit-svg__dot" cx="48" cy="28" r="3"/>
-</svg>
+
           <div class="page-hero__text">
             <p class="page-hero__sub">社區盤點與實地踏查</p>
             <h1 id="map-title" class="page-hero__title">踏查地圖</h1>
-            <p class="page-hero__desc">點選下方路線篩選或站點名稱，即可在地圖上定位並開啟該地點對應的走讀文章。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="page-section" aria-label="互動式踏查地圖與站點清單">
-      <div class="container">
-        <div class="filter-chips" style="margin-bottom:20px;">
-          <button type="button" class="filter-chip js-map-filter" data-unit-value="all" aria-pressed="true">全部站點</button>
-<button type="button" class="filter-chip js-map-filter" data-unit-value="獅頭是火山 天機活潑" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
-  <path class="unit-svg__main" d="M4 25 C7 18, 11 11, 17 8 C22 5, 26 11, 28 18 C29 22, 27 25, 22 26 C15 27, 8 27, 4 25 Z"/>
-  <path class="unit-svg__main" d="M10 21 C12 17, 15 14, 18 13 C21 12, 23 15, 22 19 C22 21, 18 22, 14 22 C12 22, 9 22, 10 21 Z"/>
-  <circle class="unit-svg__dot" cx="17" cy="17" r="2"/>
-</svg><span>獅頭山</span></button>
-<button type="button" class="filter-chip js-map-filter" data-unit-value="瑠公圳漫步" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
-  <path class="unit-svg__main" d="M5 27 C10 22, 8 17, 15 15 C22 13, 20 8, 27 5"/>
-  <path class="unit-svg__main" d="M6 12 C9 10, 11 10, 14 12"/>
-  <path class="unit-svg__main" d="M18 22 C21 20, 24 20, 27 22"/>
-  <circle class="unit-svg__dot" cx="15" cy="15" r="2"/>
-</svg><span>瑠公圳</span></button>
-<button type="button" class="filter-chip js-map-filter" data-unit-value="圳水川流 孕育大地" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
-  <path class="unit-svg__main" d="M16 28 L16 17"/>
-  <path class="unit-svg__main" d="M16 17 C16 13, 10 10, 6 5"/>
-  <path class="unit-svg__main" d="M16 17 C16 13, 22 10, 26 5"/>
-  <circle class="unit-svg__dot" cx="16" cy="17" r="2.2"/>
-</svg><span>大坪林圳</span></button>
-<button type="button" class="filter-chip js-map-filter" data-unit-value="彼此相顧 激發愛心" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
-  <path class="unit-svg__main" d="M6 22 C4 14, 9 7, 17 7 C22 7, 26 11, 26 16 C25 22, 20 26, 14 25"/>
-  <path class="unit-svg__main" d="M26 10 C28 18, 23 25, 15 25 C10 25, 6 21, 6 16 C7 10, 12 6, 18 7"/>
-  <circle class="unit-svg__dot" cx="16" cy="16" r="2"/>
-</svg><span>人物與關懷</span></button>
-        </div>
-
-        <div class="map-layout">
-          <div id="fieldwork-map" class="leaflet-canvas" role="region" aria-label="新店踏查路線 OpenStreetMap 地圖"></div>
-          <div>
-            <h2 class="section-title" style="font-size:var(--text-h3);margin-bottom:12px;">踏查站點導覽</h2>
-            <p class="footer-text" style="margin-bottom:12px;">座標依新店地標公開位置標註供路線參考；點選站名可移動地圖並檢視文章連結。</p>
-            <ul id="map-stop-list" class="stop-list">
-              <li class="stop-item">載入站點資料中…</li>
-            </ul>
+            <p class="page-hero__desc">選一條路線，開啟 Google My Maps 查看踏查地圖。</p>
           </div>
         </div>
       </div>
@@ -102,23 +55,27 @@
 
     <section class="page-section" aria-labelledby="mymaps-title">
       <div class="container">
-        <h2 id="mymaps-title" class="section-title" style="font-size:var(--text-h2);margin-bottom:16px;">原 Google My Maps 路線參考連結</h2>
+        <h2 id="mymaps-title" class="section-title" style="font-size:var(--text-h2);margin-bottom:16px;">四條踏查路線</h2>
         <ul class="mymaps-list">
           <li class="mymaps-item">
             <h3>獅頭是火山 天機活潑 淡地第一名山</h3>
-            <a href="https://www.google.com/maps/d/edit?mid=1FZVVkeUxcEvnbzmh52Qi-C_th_nBwDs&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+            <p>捷運新店站－大坪林圳－獅頭山腳－檳榔路－振山煤礦－檳榔坑頭福德宮對談分享</p>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1FZVVkeUxcEvnbzmh52Qi-C_th_nBwDs&amp;usp=sharing" aria-label="查看獅頭是火山 天機活潑 淡地第一名山的地圖">查看地圖 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <h3>瑠公圳漫步</h3>
-            <a href="https://www.google.com/maps/d/edit?mid=1o2j8glr1jot23a9c39WhbZF_twzIvsA&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+            <p>捷運新店站－瑠公圳頭－力行營區－圳邊90歲的黃媽媽一起同樂彼此分享圳邊生活點滴</p>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1o2j8glr1jot23a9c39WhbZF_twzIvsA&amp;usp=sharing" aria-label="查看瑠公圳漫步的地圖">查看地圖 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <h3>圳水川流 孕育大地</h3>
-            <a href="https://www.google.com/maps/d/edit?mid=1xvpzxBUM3dpLf9vcRErfEWmsT27fgmE&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+            <p>新店農會－大坪林圳12甲支圳－環河路－大宅庒－白馬寺、乾溪－在耆老的農田中分享農耕、水圳與生活記憶</p>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1xvpzxBUM3dpLf9vcRErfEWmsT27fgmE&amp;usp=sharing" aria-label="查看圳水川流 孕育大地的地圖">查看地圖 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <h3>彼此相顧，激發愛心</h3>
-            <a href="https://www.google.com/maps/d/edit?mid=1CFP_uu7Cpxm-jynH6ZqJ6WKCrr0kgJo&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+            <p>北新藝術廣場－瑠公圳－瑠公圳第一水閘門－大坪林市場－聖三堂－與教友們陪伴與照顧對話</p>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1CFP_uu7Cpxm-jynH6ZqJ6WKCrr0kgJo&amp;usp=sharing" aria-label="查看彼此相顧，激發愛心的地圖">查看地圖 <span aria-hidden="true">→</span></a>
           </li>
         </ul>
       </div>
@@ -144,7 +101,5 @@
     </div>
   </footer>
   <script src="../scripts/ui.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
-  <script src="../scripts/map.js"></script>
 </body>
 </html>
