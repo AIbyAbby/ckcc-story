@@ -12,12 +12,17 @@
   <link rel="stylesheet" href="../../design/base.css">
   <link rel="stylesheet" href="../../design/pages.css">
   <link rel="stylesheet" href="../../design/article.css">
+  <script>document.documentElement.classList.add("has-js");</script>
 </head>
 <body data-base="../../">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
 
-  <header class="site-header site-header--nav-only">
+  <header class="site-header site-header--nav-only site-header--article">
     <div class="container">
+      <div class="article-mobile-nav">
+        <a class="action-btn article-return-link" href="../../liugong/index.html">← 瑠公圳漫步</a>
+        <button id="nav-toggle" class="tool-btn tool-btn--outline" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      </div>
       <nav id="site-nav" class="site-nav" aria-label="主導覽列">
         <ul class="nav-list">
           <li><a class="nav-link" href="../../index.html">首頁</a></li>
@@ -28,6 +33,14 @@
           <li><a class="nav-link" href="../../dapinglin/index.html">大坪林圳</a></li>
           <li><a class="nav-link" href="../../care/index.html">人物與關懷</a></li>
         </ul>
+        <div class="reading-controls">
+          <div class="font-controls" role="group" aria-label="閱讀字級">
+            <button class="tool-btn" type="button" data-font-size="sm" aria-label="縮小字級" aria-pressed="false">A−</button>
+            <button class="tool-btn" type="button" data-font-size="md" aria-label="預設字級" aria-pressed="true">A</button>
+            <button class="tool-btn" type="button" data-font-size="lg" aria-label="放大字級" aria-pressed="false">A+</button>
+          </div>
+          <button class="tool-btn tool-btn--outline" id="theme-toggle" type="button" aria-pressed="false">深色</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -425,15 +438,18 @@
               </div>
 
               <div class="article-end">
-                <h2 class="related-heading">同單元其他文章（瑠公圳漫步）</h2>
+                <nav class="article-return" aria-label="閱讀後導覽">
+                  <a class="action-btn action-btn--primary" href="../../liugong/index.html">← 回到〈瑠公圳漫步〉</a>
+                  <a class="action-btn article-home-link" href="../../index.html">回首頁</a>
+                </nav>
+                <h2 class="related-heading">同單元文章</h2>
                 <ul class="related-list">
                   <li><a href="../2026-10-01-liugong-lixing-settlement/index.html">瑠公圳力行聚落踏查紀錄（文：張美枝）</a></li>
                   <li><a href="../2026-10-01-liugong-canal-walk/index.html">瑠公圳漫步（文：賴玉芳）</a></li>
+                  <li aria-current="page"><span>瑠公圳走讀（文：盧淑）</span><span class="related-current">正在閱讀</span></li>
                 </ul>
-
                 <nav class="pager-nav" aria-label="文章前後導覽">
                   <a class="pager-link" href="../2026-10-01-liugong-canal-walk/index.html"><span class="pager-link__dir">← 上一篇</span><span class="pager-link__title">瑠公圳漫步</span></a>
-                  <a class="pager-link pager-link--next" href="../2026-10-08-dapinglin-east-west-canals/index.html"><span class="pager-link__dir">下一篇 →</span><span class="pager-link__title">大坪林圳東西幹線</span></a>
                 </nav>
               </div>
             </div>

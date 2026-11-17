@@ -12,12 +12,17 @@
   <link rel="stylesheet" href="../../design/base.css">
   <link rel="stylesheet" href="../../design/pages.css">
   <link rel="stylesheet" href="../../design/article.css">
+  <script>document.documentElement.classList.add("has-js");</script>
 </head>
 <body data-base="../../">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
 
-  <header class="site-header site-header--nav-only">
+  <header class="site-header site-header--nav-only site-header--article">
     <div class="container">
+      <div class="article-mobile-nav">
+        <a class="action-btn article-return-link" href="../../shishan/index.html">← 獅頭是火山 天機活潑</a>
+        <button id="nav-toggle" class="tool-btn tool-btn--outline" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      </div>
       <nav id="site-nav" class="site-nav" aria-label="主導覽列">
         <ul class="nav-list">
           <li><a class="nav-link" href="../../index.html">首頁</a></li>
@@ -28,6 +33,14 @@
           <li><a class="nav-link" href="../../dapinglin/index.html">大坪林圳</a></li>
           <li><a class="nav-link" href="../../care/index.html">人物與關懷</a></li>
         </ul>
+        <div class="reading-controls">
+          <div class="font-controls" role="group" aria-label="閱讀字級">
+            <button class="tool-btn" type="button" data-font-size="sm" aria-label="縮小字級" aria-pressed="false">A−</button>
+            <button class="tool-btn" type="button" data-font-size="md" aria-label="預設字級" aria-pressed="true">A</button>
+            <button class="tool-btn" type="button" data-font-size="lg" aria-label="放大字級" aria-pressed="false">A+</button>
+          </div>
+          <button class="tool-btn tool-btn--outline" id="theme-toggle" type="button" aria-pressed="false">深色</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -111,14 +124,18 @@
               </figure>
 
               <div class="article-end">
-                <h2 class="related-heading">同單元其他文章（獅頭是火山 天機活潑）</h2>
+                <nav class="article-return" aria-label="閱讀後導覽">
+                  <a class="action-btn action-btn--primary" href="../../shishan/index.html">← 回到〈獅頭是火山 天機活潑〉</a>
+                  <a class="action-btn article-home-link" href="../../index.html">回首頁</a>
+                </nav>
+                <h2 class="related-heading">同單元文章</h2>
                 <ul class="related-list">
                   <li><a href="../2026-09-24-lion-head-hill/index.html">新店小獅頭山走讀（文：盧淑）</a></li>
                   <li><a href="../2026-09-24-cliff-buddha/index.html">獅山腰的大佛（文：賴玉芳）</a></li>
                   <li><a href="../2026-09-24-guangming-temple/index.html">廣明禪寺（文：王淑美）</a></li>
+                  <li aria-current="page"><span>檳榔坑溪（文：賴玉芳）</span><span class="related-current">正在閱讀</span></li>
                   <li><a href="../guangqin-monk-path/index.html">廣欽老和尚修行路（文：尤素秋）</a></li>
                 </ul>
-
                 <nav class="pager-nav" aria-label="文章前後導覽">
                   <a class="pager-link" href="../2026-09-24-guangming-temple/index.html"><span class="pager-link__dir">← 上一篇</span><span class="pager-link__title">廣明禪寺</span></a>
                   <a class="pager-link pager-link--next" href="../guangqin-monk-path/index.html"><span class="pager-link__dir">下一篇 →</span><span class="pager-link__title">廣欽老和尚修行路</span></a>

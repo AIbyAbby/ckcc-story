@@ -12,12 +12,17 @@
   <link rel="stylesheet" href="../../design/base.css">
   <link rel="stylesheet" href="../../design/pages.css">
   <link rel="stylesheet" href="../../design/article.css">
+  <script>document.documentElement.classList.add("has-js");</script>
 </head>
 <body data-base="../../">
   <a class="skip-link" href="#main-content">跳至主要內容</a>
 
-  <header class="site-header site-header--nav-only">
+  <header class="site-header site-header--nav-only site-header--article">
     <div class="container">
+      <div class="article-mobile-nav">
+        <a class="action-btn article-return-link" href="../../care/index.html">← 彼此相顧 激發愛心</a>
+        <button id="nav-toggle" class="tool-btn tool-btn--outline" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      </div>
       <nav id="site-nav" class="site-nav" aria-label="主導覽列">
         <ul class="nav-list">
           <li><a class="nav-link" href="../../index.html">首頁</a></li>
@@ -28,6 +33,14 @@
           <li><a class="nav-link" href="../../dapinglin/index.html">大坪林圳</a></li>
           <li><a class="nav-link" href="../../care/index.html" aria-current="page">人物與關懷</a></li>
         </ul>
+        <div class="reading-controls">
+          <div class="font-controls" role="group" aria-label="閱讀字級">
+            <button class="tool-btn" type="button" data-font-size="sm" aria-label="縮小字級" aria-pressed="false">A−</button>
+            <button class="tool-btn" type="button" data-font-size="md" aria-label="預設字級" aria-pressed="true">A</button>
+            <button class="tool-btn" type="button" data-font-size="lg" aria-label="放大字級" aria-pressed="false">A+</button>
+          </div>
+          <button class="tool-btn tool-btn--outline" id="theme-toggle" type="button" aria-pressed="false">深色</button>
+        </div>
       </nav>
     </div>
   </header>
@@ -123,12 +136,16 @@
               </div>
 
               <div class="article-end">
-                <h2 class="related-heading">同單元其他文章（彼此相顧 激發愛心）</h2>
+                <nav class="article-return" aria-label="閱讀後導覽">
+                  <a class="action-btn action-btn--primary" href="../../care/index.html">← 回到〈彼此相顧 激發愛心〉</a>
+                  <a class="action-btn article-home-link" href="../../index.html">回首頁</a>
+                </nav>
+                <h2 class="related-heading">同單元文章</h2>
                 <ul class="related-list">
                   <li><a href="../2026-10-29-shumin-inventory-and-stories/index.html">淑敏的盤點和故事書寫（文：侯淑敏）</a></li>
+                  <li aria-current="page"><span>在歲月裂縫中種植光明：從聖三堂到德華女子公寓（文：侯淑敏）</span><span class="related-current">正在閱讀</span></li>
                   <li><a href="../2026-10-31-spiritual-cartographer/index.html">靈性製圖師的25年軌跡（文：侯淑敏）</a></li>
                 </ul>
-
                 <nav class="pager-nav" aria-label="文章前後導覽">
                   <a class="pager-link" href="../2026-10-29-shumin-inventory-and-stories/index.html"><span class="pager-link__dir">← 上一篇</span><span class="pager-link__title">淑敏的盤點和故事書寫</span></a>
                   <a class="pager-link pager-link--next" href="../2026-10-31-spiritual-cartographer/index.html"><span class="pager-link__dir">下一篇 →</span><span class="pager-link__title">靈性製圖師的25年軌跡</span></a>
