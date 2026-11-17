@@ -80,6 +80,12 @@
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
+@media (min-width: 640px) and (max-width: 767px) {
+  .article-feed--hillside {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (hover: hover) and (pointer: fine) {
   .article-feed__item:hover {
     border-color: var(--river-blue);
