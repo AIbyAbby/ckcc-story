@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M24 134 C46 114, 34 88, 64 78 C96 68, 86 42, 116 32 C128 28, 138 26, 144 26"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M38 140 C58 120, 48 98, 76 89 C108 79, 98 54, 128 44 C136 41, 142 40, 146 40"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M26 70 C36 65, 44 65, 54 70"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M102 98 C112 93, 122 93, 132 98"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M108 110 C116 106, 124 106, 132 110"/>
+  <circle class="unit-svg__dot" fill="#B4650E" cx="70" cy="83" r="4"/>
+</svg>

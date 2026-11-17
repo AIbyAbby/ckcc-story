@@ -1,0 +1,134 @@
+[
+  {
+    "id": "stop-01",
+    "name": "新店捷運站（踏查起點）",
+    "unit": "獅頭是火山 天機活潑",
+    "unit_short": "獅頭山",
+    "lat": 24.9578,
+    "lng": 121.5376,
+    "note": "9/24 小獅頭山走讀與 10/01 瑠公圳漫步共同集合出發點。",
+    "story_slug": "2026-09-24-lion-head-hill",
+    "story_title": "新店小獅頭山走讀"
+  },
+  {
+    "id": "stop-02",
+    "name": "廣明禪寺（廣明巖）",
+    "unit": "獅頭是火山 天機活潑",
+    "unit_short": "獅頭山",
+    "lat": 24.9597,
+    "lng": 121.5419,
+    "note": "廣欽老和尚來臺首創道場，寺內存有「水果師」「伏虎師」黑色石碑與開山紀念堂。",
+    "story_slug": "2026-09-24-guangming-temple",
+    "story_title": "廣明禪寺"
+  },
+  {
+    "id": "stop-03",
+    "name": "廣照禪寺與山腰大佛",
+    "unit": "獅頭是火山 天機活潑",
+    "unit_short": "獅頭山",
+    "lat": 24.9606,
+    "lng": 121.5426,
+    "note": "通往寺院 177 階梯，早年從碧潭即可遠望山壁上的阿彌陀佛大佛像。",
+    "story_slug": "2026-09-24-cliff-buddha",
+    "story_title": "獅山腰的大佛"
+  },
+  {
+    "id": "stop-04",
+    "name": "檳榔路 100 號昆塞特小屋",
+    "unit": "獅頭是火山 天機活潑",
+    "unit_short": "獅頭山",
+    "lat": 24.9652,
+    "lng": 121.5432,
+    "note": "戰後留存的半圓拱形金屬波浪板建築（Quonset hut），門牌左下角有碧潭吊橋意象。",
+    "story_slug": "2026-09-24-lion-head-hill",
+    "story_title": "新店小獅頭山走讀"
+  },
+  {
+    "id": "stop-05",
+    "name": "檳榔坑溪與振山煤礦運煤台車隧道",
+    "unit": "獅頭是火山 天機活潑",
+    "unit_short": "獅頭山",
+    "lat": 24.9665,
+    "lng": 121.5455,
+    "note": "沿檳榔路溯源檳榔坑溪至蓄洪池與福德宮，並見證獅頭山東側煤礦運輸遺構。",
+    "story_slug": "2026-09-24-binlangkeng-creek",
+    "story_title": "檳榔坑溪"
+  },
+  {
+    "id": "stop-06",
+    "name": "瑠公圳引水原址與萬善同歸碑",
+    "unit": "瑠公圳漫步",
+    "unit_short": "瑠公圳",
+    "lat": 24.9547,
+    "lng": 121.5364,
+    "note": "國道 3 號橋下瑠公圳取水口原址、「萬古流芳」紀念碑與祭祀修圳先人的萬善同歸碑。",
+    "story_slug": "2026-10-01-liugong-field-notes",
+    "story_title": "瑠公圳走讀"
+  },
+  {
+    "id": "stop-07",
+    "name": "蔡金木宅",
+    "unit": "瑠公圳漫步",
+    "unit_short": "瑠公圳",
+    "lat": 24.9609,
+    "lng": 121.539,
+    "note": "瑠公圳旁縱長形「小長屋」老宅，見證老屋保存、居住權益與都市發展記憶。",
+    "story_slug": "2026-10-01-liugong-canal-walk",
+    "story_title": "瑠公圳漫步"
+  },
+  {
+    "id": "stop-08",
+    "name": "力行路聚落與過水橋",
+    "unit": "瑠公圳漫步",
+    "unit_short": "瑠公圳",
+    "lat": 24.9645,
+    "lng": 121.5406,
+    "note": "1950 年代自力造屋聚落、許碧燕女士口述訪談家園，以及大坪林圳跨越瑠公圳的過水橋。",
+    "story_slug": "2026-10-01-liugong-lixing-settlement",
+    "story_title": "瑠公圳力行聚落踏查紀錄"
+  },
+  {
+    "id": "stop-09",
+    "name": "大坪林圳引水石硿（開天宮下方）",
+    "unit": "圳水川流 孕育大地",
+    "unit_short": "大坪林圳",
+    "lat": 24.9512,
+    "lng": 121.5458,
+    "note": "乾隆 27 年（1762 年）完工通水之大坪林圳起點，先民於岩壁開鑿百餘公尺引水石硿。",
+    "story_slug": "2026-10-08-dapinglin-east-west-canals",
+    "story_title": "大坪林圳東西幹線"
+  },
+  {
+    "id": "stop-10",
+    "name": "十四張斯馨祠",
+    "unit": "圳水川流 孕育大地",
+    "unit_short": "大坪林圳",
+    "lat": 24.9806,
+    "lng": 121.5312,
+    "note": "建於清乾隆四十四年（1779 年），為新店最古老土地公廟與大坪林五庄信仰中心之一。",
+    "story_slug": "2026-10-08-dapinglin-east-west-canals",
+    "story_title": "大坪林圳東西幹線"
+  },
+  {
+    "id": "stop-11",
+    "name": "大坪林聖三堂",
+    "unit": "彼此相顧 激發愛心",
+    "unit_short": "人物與關懷",
+    "lat": 24.9825,
+    "lng": 121.5417,
+    "note": "鄰近昔日寶安街瑠公圳圳道，承載萬德華神父與柏克偉神父跨越半世紀的信仰守望。",
+    "story_slug": "2026-11-01-holy-trinity-to-dehua-womens-dorm",
+    "story_title": "在歲月裂縫中種植光明：從聖三堂到德華女子公寓"
+  },
+  {
+    "id": "stop-12",
+    "name": "德華女子公寓（寶安街一帶）",
+    "unit": "彼此相顧 激發愛心",
+    "unit_short": "人物與關懷",
+    "lat": 24.9821,
+    "lng": 121.5422,
+    "note": "1968 年由萬德華神父籌建落成，為全臺第一座職業婦女宿舍與 1960 年代女工避風港。",
+    "story_slug": "2026-10-29-shumin-inventory-and-stories",
+    "story_title": "淑敏的盤點和故事書寫"
+  }
+]

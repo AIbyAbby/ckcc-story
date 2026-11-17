@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 26 C10 24, 12 20, 16 19 C20 18, 22 21, 27 19"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 18 C16 18, 11 13, 11 9 C11 6, 13 4, 16 4 C19 4, 21 6, 21 9 C21 13, 16 18, 16 18 Z"/>
+  <circle class="unit-svg__dot" fill="#B4650E" cx="16" cy="9" r="2"/>
+</svg>

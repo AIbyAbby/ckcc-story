@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>踏查地圖｜里里有故事 X　樂齡友善處方箋</title>
+  <meta name="description" content="互動式新店小獅頭山、瑠公圳、大坪林圳與聖三堂踏查站點地圖，可從地圖直接連結至故事文章。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../design/tokens.css">
+  <link rel="stylesheet" href="../design/base.css">
+  <link rel="stylesheet" href="../design/pages.css">
+  <link rel="stylesheet" href="../design/article.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body data-base="../">
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="header-bar">
+        <a class="brand-link" href="../index.html">
+          <span class="brand-link__org">新店崇光社區大學・地方文化與社區記憶</span>
+          <span class="brand-link__name">里里有故事 X　樂齡友善處方箋</span>
+        </a>
+
+        <div class="header-tools">
+          <div class="header-search header-search--desktop">
+            <form class="search-form js-search-form" role="search" aria-label="站內搜尋">
+              <label class="sr-only" for="desktop-search">搜尋故事、地點或作者</label>
+              <input id="desktop-search" class="search-input js-search-input" type="search" placeholder="搜尋故事或地點">
+              <button class="search-submit" type="submit">搜尋</button>
+            </form>
+            <div class="search-results-panel js-search-panel" hidden aria-live="polite"></div>
+          </div>
+
+          <div class="font-controls" role="group" aria-label="閱讀字級調整">
+            <button class="tool-btn" type="button" data-font-size="sm" aria-pressed="false" aria-label="縮小字級">A−</button>
+            <button class="tool-btn" type="button" data-font-size="md" aria-pressed="true" aria-label="預設字級">A</button>
+            <button class="tool-btn" type="button" data-font-size="lg" aria-pressed="false" aria-label="放大字級">A+</button>
+          </div>
+          <button id="theme-toggle" class="tool-btn tool-btn--outline" type="button" aria-pressed="false" aria-label="切換為深色閱讀模式">深色</button>
+          <button id="nav-toggle" class="tool-btn tool-btn--outline nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+        </div>
+      </div>
+
+      <nav id="site-nav" class="site-nav" aria-label="主導覽列">
+        <div class="header-search header-search--mobile">
+          <form class="search-form js-search-form" role="search" aria-label="手機站內搜尋">
+            <label class="sr-only" for="mobile-search">搜尋故事、地點或作者</label>
+            <input id="mobile-search" class="search-input js-search-input" type="search" placeholder="搜尋故事、地點或作者">
+            <button class="search-submit" type="submit">搜尋</button>
+          </form>
+          <div class="search-results-panel js-search-panel" hidden aria-live="polite"></div>
+        </div>
+
+        <ul class="nav-list">
+          <li><a class="nav-link" href="../index.html">首頁</a></li>
+          <li><a class="nav-link" href="../origin/">源起</a></li>
+          <li><a class="nav-link" href="../map/" aria-current="page">踏查地圖</a></li>
+          <li><a class="nav-link" href="../shishan/">獅頭山</a></li>
+          <li><a class="nav-link" href="../liugong/">瑠公圳</a></li>
+          <li><a class="nav-link" href="../dapinglin/">大坪林圳</a></li>
+          <li><a class="nav-link" href="../care/">人物與關懷</a></li>
+          <li><a class="nav-link" href="../stories/">全部故事</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="breadcrumb-bar">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="目前位置">
+        <a href="../index.html">首頁</a> <span aria-hidden="true">&gt;</span> <span class="breadcrumb__current" aria-current="page">踏查地圖</span>
+      </nav>
+    </div>
+  </div>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="map-title">
+      <div class="container">
+        <div class="page-hero__inner">
+          <svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" d="M16 74 C29 70, 34 57, 48 55 C60 53, 66 61, 80 56"/>
+  <path class="unit-svg__main" d="M48 52 C48 52, 34 38, 34 28 C34 20, 40 14, 48 14 C56 14, 62 20, 62 28 C62 38, 48 52, 48 52 Z"/>
+  <path class="unit-svg__main" d="M14 82 L82 82"/>
+  <circle class="unit-svg__dot" cx="48" cy="28" r="3"/>
+</svg>
+          <div class="page-hero__text">
+            <p class="page-hero__sub">社區盤點與實地踏查</p>
+            <h1 id="map-title" class="page-hero__title">踏查地圖</h1>
+            <p class="page-hero__desc">點選下方路線篩選或站點名稱，即可在地圖上定位並開啟該地點對應的走讀文章。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-label="互動式踏查地圖與站點清單">
+      <div class="container">
+        <div class="filter-chips" style="margin-bottom:20px;">
+          <button type="button" class="filter-chip js-map-filter" data-unit-value="all" aria-pressed="true">全部站點</button>
+<button type="button" class="filter-chip js-map-filter" data-unit-value="獅頭是火山 天機活潑" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" d="M4 25 C7 18, 11 11, 17 8 C22 5, 26 11, 28 18 C29 22, 27 25, 22 26 C15 27, 8 27, 4 25 Z"/>
+  <path class="unit-svg__main" d="M10 21 C12 17, 15 14, 18 13 C21 12, 23 15, 22 19 C22 21, 18 22, 14 22 C12 22, 9 22, 10 21 Z"/>
+  <circle class="unit-svg__dot" cx="17" cy="17" r="2"/>
+</svg><span>獅頭山</span></button>
+<button type="button" class="filter-chip js-map-filter" data-unit-value="瑠公圳漫步" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" d="M5 27 C10 22, 8 17, 15 15 C22 13, 20 8, 27 5"/>
+  <path class="unit-svg__main" d="M6 12 C9 10, 11 10, 14 12"/>
+  <path class="unit-svg__main" d="M18 22 C21 20, 24 20, 27 22"/>
+  <circle class="unit-svg__dot" cx="15" cy="15" r="2"/>
+</svg><span>瑠公圳</span></button>
+<button type="button" class="filter-chip js-map-filter" data-unit-value="圳水川流 孕育大地" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" d="M16 28 L16 17"/>
+  <path class="unit-svg__main" d="M16 17 C16 13, 10 10, 6 5"/>
+  <path class="unit-svg__main" d="M16 17 C16 13, 22 10, 26 5"/>
+  <circle class="unit-svg__dot" cx="16" cy="17" r="2.2"/>
+</svg><span>大坪林圳</span></button>
+<button type="button" class="filter-chip js-map-filter" data-unit-value="彼此相顧 激發愛心" aria-pressed="false"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" d="M6 22 C4 14, 9 7, 17 7 C22 7, 26 11, 26 16 C25 22, 20 26, 14 25"/>
+  <path class="unit-svg__main" d="M26 10 C28 18, 23 25, 15 25 C10 25, 6 21, 6 16 C7 10, 12 6, 18 7"/>
+  <circle class="unit-svg__dot" cx="16" cy="16" r="2"/>
+</svg><span>人物與關懷</span></button>
+        </div>
+
+        <div class="map-layout">
+          <div id="fieldwork-map" class="leaflet-canvas" role="region" aria-label="新店踏查路線 OpenStreetMap 地圖"></div>
+          <div>
+            <h2 class="section-title" style="font-size:var(--text-h3);margin-bottom:12px;">踏查站點導覽</h2>
+            <p class="footer-text" style="margin-bottom:12px;">座標依新店地標公開位置標註供路線參考；點選站名可移動地圖並檢視文章連結。</p>
+            <ul id="map-stop-list" class="stop-list">
+              <li class="stop-item">載入站點資料中…</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section" aria-labelledby="mymaps-title">
+      <div class="container">
+        <h2 id="mymaps-title" class="section-title" style="font-size:var(--text-h2);margin-bottom:16px;">原 Google My Maps 路線參考連結</h2>
+        <ul class="mymaps-list">
+          <li class="mymaps-item">
+            <h3>獅頭是火山 天機活潑 淡地第一名山</h3>
+            <a href="https://www.google.com/maps/d/edit?mid=1FZVVkeUxcEvnbzmh52Qi-C_th_nBwDs&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+          </li>
+          <li class="mymaps-item">
+            <h3>瑠公圳漫步</h3>
+            <a href="https://www.google.com/maps/d/edit?mid=1o2j8glr1jot23a9c39WhbZF_twzIvsA&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+          </li>
+          <li class="mymaps-item">
+            <h3>圳水川流 孕育大地</h3>
+            <a href="https://www.google.com/maps/d/edit?mid=1xvpzxBUM3dpLf9vcRErfEWmsT27fgmE&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+          </li>
+          <li class="mymaps-item">
+            <h3>彼此相顧，激發愛心</h3>
+            <a href="https://www.google.com/maps/d/edit?mid=1CFP_uu7Cpxm-jynH6ZqJ6WKCrr0kgJo&usp=sharing" target="_blank" rel="noopener noreferrer">開啟 Google My Maps 路線 →</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <button id="back-to-top" class="back-to-top" type="button" hidden aria-label="回到頁面頂部">回到頂部 ↑</button>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col--nav">
+        <p class="footer-heading">網站導覽</p>
+        <ul class="footer-nav-list">
+          <li><a href="../index.html">首頁</a></li>
+          <li><a href="../origin/">源起</a></li>
+          <li><a href="../map/">踏查地圖</a></li>
+          <li><a href="../shishan/">獅頭山</a></li>
+          <li><a href="../liugong/">瑠公圳</a></li>
+          <li><a href="../dapinglin/">大坪林圳</a></li>
+          <li><a href="../care/">人物與關懷</a></li>
+          <li><a href="../stories/">全部故事</a></li>
+        </ul>
+      </div>
+      <div class="footer-col--volunteers">
+        <p class="footer-heading">撰稿志工</p>
+        <p class="footer-text">
+          盧淑、賴玉芳、王淑美、尤素秋、張美枝、侯淑敏（取自原稿作者署名；帶隊指導：高淑華老師）。
+        </p>
+      </div>
+      <div class="footer-col--source">
+        <p class="footer-heading">資料來源</p>
+        <p class="footer-text">
+          新店崇光社區大學「115秋河川閱讀歷史成果」走讀與訪談資料。
+        </p>
+      </div>
+      <div class="footer-col--contact">
+        <p class="footer-heading">圖片授權與聯絡</p>
+        <p class="footer-text">
+          照片人物已取得同意。<span class="footer-todo">TODO：待補圖片授權條款與聯絡方式。</span>
+        </p>
+      </div>
+    </div>
+  </footer>
+  <script src="../scripts/ui.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="../scripts/map.js"></script>
+</body>
+</html>

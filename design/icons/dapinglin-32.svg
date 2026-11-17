@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" class="unit-svg" aria-hidden="true">
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 28 L16 17"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 17 C16 13, 10 10, 6 5"/>
+  <path class="unit-svg__main" stroke="#1D5E7A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 17 C16 13, 22 10, 26 5"/>
+  <circle class="unit-svg__dot" fill="#B4650E" cx="16" cy="17" r="2.2"/>
+</svg>

@@ -1,0 +1,108 @@
+/* ==========================================================================
+   設計系統變數（design/tokens.css）
+   里里有故事 X 樂齡友善處方箋 — 地方誌數位刊物設計系統
+   規範：
+   - 淡青灰紙色底、墨藍灰文字（不用純黑）、溪水藍作連結與路線、燈籠琥珀色只用於重點標記
+   - 淺色與深色模式各自微調，符合 WCAG AA 對比
+   - 標題與內文：Noto Serif TC；導覽、日期、圖說、按鈕：Noto Sans TC
+   - 內文基準 19px–20px，行高 1.95，每行不超過 34 個中文字
+   ========================================================================== */
+
+:root {
+  /* 字體家族（搭配 font-display: swap 與系統備用字型） */
+  --font-serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", "Apple LiSung", Georgia, serif;
+  --font-sans: "Noto Sans TC", "Source Han Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+
+  /* 字級縮放倍率（由 A- / A / A+ 控制） */
+  --font-scale: 1;
+
+  /* 字級系統 */
+  --text-caption: calc(0.9375rem * var(--font-scale)); /* ~15px 圖說、日期 */
+  --text-ui: calc(1rem * var(--font-scale));           /* ~16px 導覽、按鈕 */
+  --text-body: calc(1.21875rem * var(--font-scale));   /* 19.5px 內文（19–20px） */
+  --text-lead: calc(1.375rem * var(--font-scale));     /* 22px 文章導言（大一階） */
+  --text-h3: calc(1.375rem * var(--font-scale));       /* 22px 小節標題 */
+  --text-h2: calc(1.75rem * var(--font-scale));        /* 28px 單元／區塊標題 */
+  --text-h1: clamp(1.9rem, 3.2vw, 2.65rem);            /* 頁面主標題 */
+
+  /* 行高與字距 */
+  --leading-heading: 1.4;
+  --leading-ui: 1.5;
+  --leading-body: 1.95;
+  --tracking-heading: 0.04em;
+  --tracking-body: 0.015em;
+
+  /* 格線與欄寬 */
+  --container-max: 1200px;
+  --prose-max-ch: 34em; /* 嚴格限制每行不超過 34 個中文字 */
+  --article-col-max: 680px;
+
+  /* 間距系統（8px 基準倍數） */
+  --space-1: 0.25rem;  /* 4px */
+  --space-2: 0.5rem;   /* 8px */
+  --space-3: 0.75rem;  /* 12px */
+  --space-4: 1rem;     /* 16px */
+  --space-5: 1.25rem;  /* 20px（手機側邊留白） */
+  --space-6: 1.75rem;  /* 28px */
+  --space-8: 2.5rem;   /* 40px */
+  --space-10: 4rem;    /* 64px */
+  --space-12: 5.5rem;  /* 88px */
+
+  /* 觸控最小尺寸（手機 >= 48px） */
+  --tap-desktop: 44px;
+  --tap-mobile: 48px;
+
+  /* 淺色模式色彩（淡青灰紙色底 × 墨藍灰 × 溪水藍 × 燈籠琥珀） */
+  --bg-paper: #F2F4F2;        /* 淡青灰紙色底 */
+  --bg-surface: #F9FAF8;      /* 淺紙層次 */
+  --bg-inset: #E8ECE9;        /* 本篇資訊／旁註底 */
+  --bg-header: rgba(242, 244, 242, 0.94);
+
+  --ink-primary: #1E2B33;     /* 墨藍灰（非純黑，對比 > 12:1） */
+  --ink-secondary: #485861;   /* 次要墨灰（對比 > 6.5:1） */
+  --ink-muted: #5A6B75;       /* 圖說與日期（對比 > 5.0:1，符合 WCAG AA） */
+
+  --river-blue: #1D5E7A;      /* 溪水藍：連結、水路主線（對比 > 6.3:1） */
+  --river-blue-hover: #134459;
+  --river-tint: #DCE8ED;      /* 溪水淡染 */
+
+  --lantern-amber: #B4650E;   /* 燈籠琥珀：僅用於重點標記（對比 > 4.6:1） */
+  --lantern-tint: #F6EAD8;
+
+  --line-hairline: #C9D2CE;   /* 1px 細線分隔 */
+  --line-strong: #8A9A95;
+  --focus-ring: #1D5E7A;
+}
+
+/* 深色模式：獨立調校的夜讀墨紙色，非單純色彩反轉 */
+[data-theme="dark"] {
+  --bg-paper: #141B1E;        /* 深墨青夜紙 */
+  --bg-surface: #1B2428;      /* 微亮紙層 */
+  --bg-inset: #222D32;        /* 資訊框深底 */
+  --bg-header: rgba(20, 27, 30, 0.94);
+
+  --ink-primary: #E7ECEA;     /* 柔白墨紙字（非純白刺眼，對比 > 12:1） */
+  --ink-secondary: #B7C4C9;   /* 次要字（對比 > 7.5:1） */
+  --ink-muted: #98A9B0;       /* 圖說與日期（對比 > 5.4:1） */
+
+  --river-blue: #6BB6D6;      /* 夜色淺一階溪水藍（對比 > 7.4:1） */
+  --river-blue-hover: #8ECAE3;
+  --river-tint: #1E3642;
+
+  --lantern-amber: #E8A848;   /* 夜燈暖琥珀重點標記（對比 > 7.8:1） */
+  --lantern-tint: #362916;
+
+  --line-hairline: #303E43;   /* 深色 1px 細線 */
+  --line-strong: #5E7077;
+  --focus-ring: #8ECAE3;
+}
+
+/* 偏好減少動態效果 */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

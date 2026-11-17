@@ -1,0 +1,7 @@
+raw-drive/
+videos/
+codex-brief.docx
+images/home/
+*.docx
+.DS_Store
+Thumbs.db

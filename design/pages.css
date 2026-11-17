@@ -1,0 +1,442 @@
+/* ==========================================================================
+   單元頁、全部故事篩選頁、源起頁與踏查地圖頁樣式（design/pages.css）
+   ========================================================================== */
+
+.page-hero {
+  padding-block: var(--space-8) var(--space-6);
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.page-hero__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.page-hero__text {
+  flex: 1;
+  min-width: 260px;
+}
+
+.page-hero__sub {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--lantern-amber);
+  letter-spacing: 0.06em;
+  margin: 0 0 6px;
+}
+
+.page-hero__title {
+  font-size: var(--text-h1);
+  margin-bottom: var(--space-3);
+}
+
+.page-hero__desc {
+  font-size: var(--text-lead);
+  color: var(--ink-secondary);
+  max-width: var(--prose-max-ch);
+  margin: 0;
+}
+
+.page-section {
+  padding-block: var(--space-8);
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.page-section:last-of-type {
+  border-bottom: 0;
+}
+
+/* --------------------------------------------------------------------------
+   單元頁與全部故事頁列表（雙欄圖文網格，全卡可點擊，參考 works.html 編排）
+   -------------------------------------------------------------------------- */
+.article-feed {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 28px;
+}
+
+@media (min-width: 768px) {
+  .article-feed {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+}
+
+.article-feed__item {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-surface);
+  border: 1px solid var(--line-hairline);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .article-feed__item:hover {
+    border-color: var(--river-blue);
+    transform: translateY(-2px);
+  }
+}
+
+.article-feed__item:focus-within {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.article-feed__thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-bottom: 1px solid var(--line-hairline);
+  background: var(--bg-inset);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.article-feed__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.poster-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(29, 94, 122, 0.9);
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.125rem;
+  pointer-events: none;
+}
+
+.article-feed__copy {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 22px 24px 24px;
+}
+
+.article-feed__meta {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--ink-muted);
+  margin: 0 0 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+}
+
+.article-feed__unit {
+  color: var(--river-blue);
+  font-weight: 700;
+}
+
+.article-feed__title {
+  font-size: var(--text-h3);
+  line-height: 1.4;
+  margin: 0 0 8px;
+}
+
+.article-feed__title .stretched-link {
+  text-decoration: none;
+  color: var(--ink-primary);
+}
+
+.article-feed__title .stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.article-feed__item:hover .article-feed__title .stretched-link {
+  color: var(--river-blue);
+}
+
+.article-feed__author {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--ink-secondary);
+  margin: 0 0 12px;
+}
+
+.article-feed__summary {
+  margin: 0 0 18px;
+  color: var(--ink-secondary);
+  font-size: var(--text-ui);
+  line-height: 1.85;
+  flex: 1;
+}
+
+.article-feed__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-hairline);
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--river-blue);
+}
+
+/* --------------------------------------------------------------------------
+   全部故事頁：搜尋框、單元篩選（含 32px SVG）、日期排序
+   -------------------------------------------------------------------------- */
+.filter-toolbar {
+  border: 1px solid var(--line-hairline);
+  background: var(--bg-surface);
+  padding: var(--space-5);
+  margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.filter-top-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .filter-top-row {
+    grid-template-columns: 1fr auto;
+    align-items: end;
+  }
+}
+
+.filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.filter-label {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--ink-secondary);
+}
+
+.filter-input,
+.filter-select {
+  font-family: var(--font-sans);
+  font-size: var(--text-ui);
+  color: var(--ink-primary);
+  background: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  min-height: var(--tap-mobile);
+  padding: 0 14px;
+}
+
+.filter-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filter-chip {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  font-weight: 700;
+  color: var(--ink-primary);
+  background: var(--bg-paper);
+  border: 1px solid var(--line-strong);
+  min-height: var(--tap-mobile);
+  padding: 6px 14px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filter-chip:hover {
+  border-color: var(--river-blue);
+  background: var(--river-tint);
+}
+
+.filter-chip[aria-pressed="true"] {
+  background: var(--river-blue);
+  border-color: var(--river-blue);
+  color: var(--bg-paper);
+}
+
+.filter-chip[aria-pressed="true"] .unit-svg__main {
+  stroke: var(--bg-paper);
+}
+
+.filter-count {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--ink-muted);
+  margin: 0 0 var(--space-3);
+}
+
+/* --------------------------------------------------------------------------
+   文章內表格（大坪林圳東西幹線）與影片區塊
+   -------------------------------------------------------------------------- */
+.story-table-wrap {
+  overflow-x: auto;
+  margin-block: var(--space-6);
+  border: 1px solid var(--line-hairline);
+}
+
+.story-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  line-height: 1.6;
+  text-align: left;
+}
+
+.story-table th,
+.story-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line-hairline);
+  vertical-align: top;
+}
+
+.story-table th {
+  background: var(--bg-inset);
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+
+.story-video-wrap {
+  margin-block: var(--space-6);
+  border: 1px solid var(--line-hairline);
+  background: #000000;
+}
+
+.story-video-wrap video {
+  display: block;
+  width: 100%;
+  max-height: 560px;
+}
+
+/* --------------------------------------------------------------------------
+   踏查地圖頁（Leaflet + OpenStreetMap + 站點導覽）
+   -------------------------------------------------------------------------- */
+.map-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+@media (min-width: 960px) {
+  .map-layout {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+.leaflet-canvas {
+  width: 100%;
+  height: 440px;
+  border: 1px solid var(--line-strong);
+  background: var(--bg-inset);
+  z-index: 1;
+}
+
+@media (min-width: 960px) {
+  .leaflet-canvas {
+    height: 540px;
+    position: sticky;
+    top: 132px;
+  }
+}
+
+.stop-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stop-item {
+  border-top: 1px solid var(--line-hairline);
+  padding-block: var(--space-4);
+}
+
+.stop-item:last-child {
+  border-bottom: 1px solid var(--line-hairline);
+}
+
+.stop-item__btn {
+  font-family: var(--font-serif);
+  font-size: var(--text-ui);
+  font-weight: 700;
+  color: var(--river-blue);
+  background: transparent;
+  border: 0;
+  padding: 4px 0;
+  min-height: 44px;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.stop-item__btn:hover {
+  text-decoration: underline;
+}
+
+.stop-item__meta {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--ink-muted);
+  margin: 2px 0 6px;
+}
+
+.stop-item__desc {
+  font-family: var(--font-sans);
+  font-size: var(--text-caption);
+  color: var(--ink-secondary);
+  margin: 0 0 8px;
+}
+
+.mymaps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .mymaps-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.mymaps-item {
+  border: 1px solid var(--line-hairline);
+  background: var(--bg-surface);
+  padding: var(--space-4);
+}
+
+.mymaps-item h3 {
+  font-size: var(--text-ui);
+  margin-bottom: 6px;
+}
