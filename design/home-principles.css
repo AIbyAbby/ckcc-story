@@ -27,15 +27,3 @@
   font-size: clamp(1.0625rem, 1.48vw, 1.75rem);
   line-height: 1.45;
 }
-
-@media (max-width: 900px) {
-  .home-principles__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .home-principles__grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
