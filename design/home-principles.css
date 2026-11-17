@@ -1,11 +1,15 @@
 .home-principles {
-  padding-block: clamp(24px, 4vw, 48px);
+  padding-block: clamp(24px, 1.9vw, 36px) clamp(32px, 2.6vw, 48px);
+  background: #fff;
+  color: #202020;
 }
 
 .home-principles__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 28px);
+  width: min(1720px, calc(100% - clamp(32px, 8.5vw, 160px)));
+  margin-inline: auto;
+  gap: clamp(20px, 2.35vw, 44px);
 }
 
 .home-principles figure {
@@ -19,9 +23,9 @@
 }
 
 .home-principles figcaption {
-  margin-top: 12px;
-  font-size: 1rem;
-  line-height: 1.7;
+  margin: clamp(12px, 1.25vw, 24px) 3% 0;
+  font-size: clamp(1.0625rem, 1.48vw, 1.75rem);
+  line-height: 1.45;
 }
 
 @media (max-width: 900px) {
