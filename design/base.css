@@ -394,6 +394,10 @@ a:hover {
   .site-header--nav-only .nav-link {
     white-space: nowrap;
   }
+
+  .site-header--nav-only .nav-link[aria-current="page"] {
+    border-left-color: transparent;
+  }
 }
 
 .nav-list {
