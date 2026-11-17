@@ -327,12 +327,15 @@
   margin-block: var(--space-6);
   border: 1px solid var(--line-hairline);
   background: #000000;
+  aspect-ratio: 16 / 9;
 }
 
-.story-video-wrap video {
+.story-video-wrap video,
+.story-video-wrap iframe {
   display: block;
   width: 100%;
-  max-height: 560px;
+  height: 100%;
+  border: 0;
 }
 
 /* --------------------------------------------------------------------------
