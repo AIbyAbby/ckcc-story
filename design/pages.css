@@ -459,34 +459,21 @@
   border-radius: 8px;
 }
 
-.route-map-images {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(12px, 2vw, 24px);
-  margin-top: 16px;
-}
-
-.route-map-images figure {
-  margin: 0;
-}
-
-.route-map-images a,
-.route-map-images img {
+.mymaps-image,
+.mymaps-image img {
   display: block;
   width: 100%;
 }
 
-.route-map-images img {
+.mymaps-image img {
   height: auto;
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
 }
 
-.route-map-images figcaption {
-  margin-top: 8px;
-}
-
-@media (max-width: 767px) {
-  .route-map-images {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+@media (min-width: 1100px) {
+  .mymaps-list {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }
 .origin-actions {
