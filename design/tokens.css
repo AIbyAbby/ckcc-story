@@ -9,6 +9,9 @@
    ========================================================================== */
 
 :root {
+  --site-reading-heading: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem);
+  --reading-card-surface: #fff;
+  --site-reading-size: clamp(1.0625rem, 1.02rem + 0.2vw, 1.1875rem);
   color-scheme: light;
   /* 字體家族（搭配 font-display: swap 與系統備用字型） */
   --font-serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", "Apple LiSung", Georgia, serif;
@@ -54,7 +57,7 @@
   --tap-mobile: 48px;
 
   /* 淺色模式色彩（淡青灰紙色底 × 墨藍灰 × 溪水藍 × 燈籠琥珀） */
-  --bg-paper: #F2F4F2;        /* 淡青灰紙色底 */
+  --bg-paper: #F6F4ED;        /* 淡青灰紙色底 */
   --bg-surface: #F9FAF8;      /* 淺紙層次 */
   --bg-inset: #E8ECE9;        /* 本篇資訊／旁註底 */
   --bg-header: rgba(242, 244, 242, 0.94);
@@ -77,6 +80,7 @@
 
 /* 深色模式：獨立調校的夜讀墨紙色，非單純色彩反轉 */
 [data-theme="dark"] {
+  --reading-card-surface: var(--bg-surface);
   --bg-paper: #141B1E;        /* 深墨青夜紙 */
   --bg-surface: #1B2428;      /* 微亮紙層 */
   --bg-inset: #222D32;        /* 資訊框深底 */

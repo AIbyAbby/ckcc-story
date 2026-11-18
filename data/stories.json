@@ -33,7 +33,7 @@
     "unit": "獅頭是火山 天機活潑",
     "unit_short": "獅頭山",
     "author": "王淑美",
-    "summary": "廣明禪寺依著山勢而建。從寺院走近山壁上的洞窟，循著早年的修行足跡，也聽見地方流傳下來的故事。",
+    "summary": "廣明禪寺依著山勢而建。循山壁尋訪早年的修行洞窟，也能讀到地方流傳下來的修行故事。",
     "image_count": 0,
     "first_image": "",
     "markdown": "content/stories/2026-09-24-guangming-temple.md"
@@ -59,7 +59,7 @@
     "unit": "獅頭是火山 天機活潑",
     "unit_short": "獅頭山",
     "author": "尤素秋",
-    "summary": "從新店溪右岸的小獅山，到大漢溪右岸的南天母山，尤素秋沿著地圖尋找廣欽老和尚的修行足跡，細看兩處落腳地的山水。",
+    "summary": "從新店溪右岸的小獅山，到大漢溪右岸的南天母山，沿著地圖尋找廣欽老和尚的修行足跡。",
     "image_count": 3,
     "first_image": "images/stories/guangqin-monk-path/img-01.jpg",
     "markdown": "content/stories/guangqin-monk-path.md"
@@ -85,7 +85,7 @@
     "unit": "瑠公圳漫步",
     "unit_short": "瑠公圳",
     "author": "賴玉芳",
-    "summary": "從瑠公圳頭的「萬善同歸」石碑走到過水橋，可見兩條水圳如何交會。沿著圳道往前，老宅與軍營也是聚落記憶的一部分。",
+    "summary": "從瑠公圳頭的「萬善同歸」石碑走到過水橋，可以看見兩條水圳怎樣交會。再往力行營區走，沿岸的老宅與居民故事，慢慢拼出聚落的樣子。",
     "image_count": 2,
     "first_image": "images/stories/2026-10-01-liugong-canal-walk/img-01.jpeg",
     "markdown": "content/stories/2026-10-01-liugong-canal-walk.md"
@@ -98,7 +98,7 @@
     "unit": "瑠公圳漫步",
     "unit_short": "瑠公圳",
     "author": "盧淑",
-    "summary": "從碧潭堰旁的引水石硿走到瑠公圳親水公園，沿途經過蔡金木宅與力行營區。循著各站紀錄，看昔日的圳道如何留在今日街區。",
+    "summary": "從碧潭堰旁的引水石硿出發，經過蔡金木宅與力行營區，再走到瑠公圳親水公園。一路看水怎麼引進來，也看昔日的圳道如何留在今日的街區裡。",
     "image_count": 28,
     "first_image": "images/stories/2026-10-01-liugong-field-notes/img-01.jpeg",
     "markdown": "content/stories/2026-10-01-liugong-field-notes.md"
@@ -118,15 +118,15 @@
   },
   {
     "slug": "2026-10-29-shumin-inventory-and-stories",
-    "title": "淑敏的盤點和故事書寫",
-    "display_title": "淑敏的盤點和故事書寫",
-    "date": "2026-10-29",
+    "title": "德華女子公寓",
+    "display_title": "德華女子公寓",
+    "date": "",
     "unit": "彼此相顧 激發愛心",
     "unit_short": "人物與關懷",
     "author": "侯淑敏",
-    "summary": "侯淑敏從德華女子公寓的故事與一部人物紀實影片，記下這次社區盤點的兩段地方記憶。",
+    "summary": "1960 年代，許多年輕女工離鄉來到新店。萬德華神父在寶斗厝籌建德華女子公寓，讓她們在工廠以外有個可以安頓的地方。",
     "image_count": 0,
-    "first_image": "",
+    "first_image": "images/stories/2026-10-29-shumin-inventory-and-stories/dehua-notebook-cover.webp",
     "markdown": "content/stories/2026-10-29-shumin-inventory-and-stories.md"
   },
   {
@@ -137,7 +137,7 @@
     "unit": "彼此相顧 激發愛心",
     "unit_short": "人物與關懷",
     "author": "侯淑敏",
-    "summary": "寶安街一帶曾流過瑠公圳。從聖三堂走到德華女子公寓，回看新店工業年代的離鄉女工如何在這裡找到住處。",
+    "summary": "寶安街一帶曾流過瑠公圳，附近的聖三堂與德華女子公寓，則留下新店工業年代的另一段故事。這篇從地方口述與舊址出發，回看離鄉女工如何在這裡找到住處。",
     "image_count": 10,
     "first_image": "images/stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/img-01.jpg",
     "markdown": "content/stories/2026-11-01-holy-trinity-to-dehua-womens-dorm.md"
@@ -150,7 +150,7 @@
     "unit": "彼此相顧 激發愛心",
     "unit_short": "人物與關懷",
     "author": "侯淑敏",
-    "summary": "一位波蘭神父在台灣走過二十五年。跟著侯淑敏的影片，一起回望他在這片土地上的生命足跡。",
+    "summary": "一位波蘭神父在台灣走過二十五年。跟著影片，一起回望他在這片土地上的生命足跡。",
     "image_count": 0,
     "first_image": "",
     "video": "videos/2026-10-31-spiritual-cartographer.mp4",

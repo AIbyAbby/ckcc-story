@@ -3,11 +3,12 @@
    ========================================================================== */
 
 .page-hero {
-  padding-block: var(--space-8) var(--space-6);
-  border-bottom: 1px solid var(--line-hairline);
+  padding-block: clamp(24px, 4vw, 48px) 0;
 }
 
 .page-hero__inner {
+  max-width: 1000px;
+  margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -16,7 +17,8 @@
 
 .page-hero__text {
   flex: 1;
-  min-width: 260px;
+  min-width: 0;
+  text-align: left;
 }
 
 .page-hero__sub {
@@ -28,16 +30,19 @@
   margin: 0 0 6px;
 }
 
+.page-hero__title,
+.page-section .section-title {
+  text-align: center;
+}
+
 .page-hero__title {
-  font-size: var(--text-h1);
   margin-bottom: var(--space-3);
+  text-wrap: balance;
 }
 
 .page-hero__desc {
-  font-size: var(--text-lead);
   color: var(--ink-secondary);
-  max-width: var(--prose-max-ch);
-  margin: 0;
+  margin: 0 auto;
 }
 
 .page-section {
@@ -73,9 +78,9 @@
   isolation: isolate;
   display: flex;
   flex-direction: column;
-  background: var(--bg-surface);
+  background: var(--reading-card-surface);
   border: 1px solid var(--line-hairline);
-  border-radius: 10px;
+  border-radius: 0.75rem;
   overflow: hidden;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
@@ -188,7 +193,8 @@
 .article-feed__summary {
   margin: 0 0 18px;
   color: var(--ink-secondary);
-  font-size: var(--text-ui);
+  font-family: var(--font-sans);
+  font-size: var(--site-reading-size);
   line-height: 1.85;
   line-break: strict;
   text-wrap: pretty;
@@ -443,8 +449,8 @@
 
 .mymaps-item {
   border: 1px solid var(--line-hairline);
-  background: var(--bg-surface);
-  border-radius: 8px;
+  background: var(--reading-card-surface);
+  border-radius: 0.75rem;
   padding: clamp(16px, 3vw, 28px);
   display: flex;
   flex-direction: column;
@@ -458,6 +464,9 @@
 
 .mymaps-item p {
   margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--site-reading-size);
+  line-height: 1.85;
   overflow-wrap: anywhere;
 }
 
@@ -504,11 +513,17 @@
 }
 
 .page-hero__lead {
-  max-width: 30em;
-  margin: 12px 0 14px;
-  font-size: var(--text-lead);
-  line-height: 1.7;
+  margin: 12px auto 14px;
   color: var(--ink-primary);
+}
+
+.page-hero__lead,
+.page-hero__desc {
+  max-width: 38em;
+  font-family: var(--font-sans);
+  font-size: var(--site-reading-size);
+  line-height: 1.85;
+  text-wrap: pretty;
 }
 
 .page-hero__lead + .page-hero__desc {
