@@ -474,3 +474,26 @@
   .site-header--article .nav-link { min-height: 44px; }
 }
 .site-header--article .nav-link { min-height: 44px; }
+
+.article-title {
+  font-size: clamp(1.875rem, 4.8vw, 2.75rem);
+  text-wrap: wrap;
+}
+
+.prose-text {
+  line-height: 1.85;
+}
+
+.prose-text p + p {
+  margin-top: 1em;
+}
+
+.prose-section-title {
+  font-family: var(--font-sans);
+}
+
+.story-figure figcaption {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink-secondary);
+}

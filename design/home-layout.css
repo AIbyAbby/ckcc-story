@@ -98,3 +98,30 @@ header{background:white;color:var(--ink);box-shadow:0 2px 6px #24333212;position
 .header [aria-current="page"]{color:#99501c}
 .home-introduction h1{font-size:clamp(1.9rem,4vw,3.25rem);margin-bottom:18px}
 @media(min-width:741px){.cards--odd{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+.home-introduction {
+  padding-block: clamp(28px, 4vw, 56px) clamp(20px, 3vw, 40px);
+}
+
+.home-introduction h2 {
+  max-width: 24em;
+  font-size: clamp(1.7rem, 3vw, 2.5rem);
+  line-height: 1.4;
+  text-align: left;
+  text-wrap: wrap;
+}
+
+.home-introduction .intro {
+  max-width: 34em;
+  margin: 0 0 1em;
+  font-size: clamp(1.1875rem, 2.2vw, 1.3125rem);
+  line-height: 1.85;
+}
+
+.home-introduction .intro:last-child {
+  margin-bottom: 0;
+}
+
+.project-intro-lead {
+  font-weight: 700;
+}

@@ -29,3 +29,22 @@
   font-size: clamp(1.0625rem, 1.48vw, 1.75rem);
   line-height: 1.45;
 }
+
+.home-principles figcaption {
+  font-family: var(--sans);
+  font-size: clamp(1.0625rem, 1.5vw, 1.375rem);
+  line-height: 1.65;
+}
+
+.home-principles__grid:focus-visible {
+  outline: 3px solid #254f52;
+  outline-offset: 4px;
+}
+
+@media (max-width: 767px) {
+  .home-principles__grid {
+    grid-template-columns: repeat(4, minmax(11rem, 1fr));
+    overflow-x: auto;
+    padding-bottom: 12px;
+  }
+}
