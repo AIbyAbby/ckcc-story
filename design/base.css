@@ -409,8 +409,7 @@ a:hover {
   flex: none;
 }
 
-.site-header--nav-only .mobile-menu,
-.site-unit-return {
+.site-header--nav-only .mobile-menu {
   display: none;
 }
 
@@ -517,11 +516,6 @@ a:hover {
 
   .site-header--nav-only .mobile-menu .submenu { padding-inline-start: 16px; }
 
-  .site-header--nav-only .site-unit-return {
-    display: inline-flex;
-    grid-column: 1 / -1;
-    justify-self: start;
-  }
 }
 
 .nav-list {
