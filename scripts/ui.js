@@ -11,8 +11,6 @@
   const SCALES = { sm: '0.9', md: '1', lg: '1.15' };
 
   const root = document.documentElement;
-  const navToggle = document.getElementById('nav-toggle');
-  const siteNav = document.getElementById('site-nav');
   const fontBtns = document.querySelectorAll('[data-font-size]');
 
   function applyFontScale(sizeKey) {
@@ -49,24 +47,6 @@
         enlargedMap.alt = link.querySelector('img').alt;
         routeMapDialog.showModal();
       });
-    });
-  }
-
-  if (navToggle && siteNav) {
-    root.classList.add('has-nav-menu');
-    navToggle.addEventListener('click', function () {
-      const isOpen = siteNav.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', String(isOpen));
-      navToggle.textContent = isOpen ? '關閉' : '選單';
-    });
-
-    document.addEventListener('keydown', function (event) {
-      if (event.key === 'Escape' && siteNav.classList.contains('is-open')) {
-        siteNav.classList.remove('is-open');
-        navToggle.setAttribute('aria-expanded', 'false');
-        navToggle.textContent = '選單';
-        navToggle.focus();
-      }
     });
   }
 

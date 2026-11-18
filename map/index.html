@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../design/tokens.css">
-  <link rel="stylesheet" href="../design/base.css?v=school-brand">
+  <link rel="stylesheet" href="../design/base.css?v=grouped-nav">
   <link rel="stylesheet" href="../design/pages.css">
   <link rel="stylesheet" href="../design/article.css?v=school-brand">
 </head>
@@ -19,18 +19,8 @@
   <header class="site-header site-header--nav-only">
     <div class="container">
       <a class="site-brand" href="../index.html"><img src="../images/ckcc-logo.png" alt="" width="36" height="36"><span>新北市新店崇光社區大學</span></a>
-      <button id="nav-toggle" class="tool-btn tool-btn--outline site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
-      <nav id="site-nav" class="site-nav" aria-label="主導覽列">
-        <ul class="nav-list">
-          <li><a class="nav-link" href="../index.html">首頁</a></li>
-          <li><a class="nav-link" href="../origin/index.html">源起</a></li>
-          <li><a class="nav-link" href="../map/index.html" aria-current="page">踏查地圖</a></li>
-          <li><a class="nav-link" href="../shishan/index.html">獅頭山</a></li>
-          <li><a class="nav-link" href="../liugong/index.html">瑠公圳</a></li>
-          <li><a class="nav-link" href="../dapinglin/index.html">大坪林圳</a></li>
-          <li><a class="nav-link" href="../care/index.html">人物與關懷</a></li>
-        </ul>
-      </nav>
+      <nav class="nav-main" aria-label="主選單"><a href="../index.html">首頁</a><details name="desktop-section"><summary>社區盤點與實地踏查</summary><div class="submenu"><a href="../origin/index.html">源起</a><a href="../map/index.html" aria-current="page">踏查地圖</a></div></details><details name="desktop-section"><summary>獅頭是火山 天機活潑</summary><div class="submenu"><a href="../shishan/index.html">查看單元｜獅頭是火山 天機活潑</a><a href="../stories/2026-09-24-lion-head-hill/index.html">新店小獅頭山走讀</a><a href="../stories/2026-09-24-cliff-buddha/index.html">獅山腰的大佛</a><a href="../stories/2026-09-24-guangming-temple/index.html">廣明禪寺</a><a href="../stories/2026-09-24-binlangkeng-creek/index.html">檳榔坑溪</a><a href="../stories/guangqin-monk-path/index.html">廣欽老和尚修行路</a></div></details><details name="desktop-section"><summary>瑠公圳漫步</summary><div class="submenu"><a href="../liugong/index.html">查看單元｜瑠公圳漫步</a><a href="../stories/2026-10-01-liugong-lixing-settlement/index.html">瑠公圳力行聚落踏查紀錄</a><a href="../stories/2026-10-01-liugong-canal-walk/index.html">瑠公圳漫步</a><a href="../stories/2026-10-01-liugong-field-notes/index.html">瑠公圳走讀</a></div></details><details name="desktop-section"><summary>圳水川流 孕育大地</summary><div class="submenu"><a href="../dapinglin/index.html">查看單元｜圳水川流 孕育大地</a><a href="../stories/2026-10-08-dapinglin-east-west-canals/index.html">大坪林圳東西幹線</a></div></details><details name="desktop-section"><summary>彼此相顧 激發愛心</summary><div class="submenu"><a href="../care/index.html">查看單元｜彼此相顧 激發愛心</a><a href="../stories/2026-10-31-spiritual-cartographer/index.html">靈性製圖師的25年軌跡</a><a href="../stories/2026-10-29-shumin-inventory-and-stories/index.html">德華女子公寓</a><a href="../stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/index.html">在歲月裂縫中種植光明：從聖三堂到德華女子公寓</a></div></details></nav>
+      <details class="mobile-menu"><summary>選單</summary><nav aria-label="手機主選單"><a href="../index.html">首頁</a><details name="mobile-section" open><summary>社區盤點與實地踏查</summary><div class="submenu"><a href="../origin/index.html">源起</a><a href="../map/index.html" aria-current="page">踏查地圖</a></div></details><details name="mobile-section"><summary>獅頭是火山 天機活潑</summary><div class="submenu"><a href="../shishan/index.html">查看單元｜獅頭是火山 天機活潑</a><a href="../stories/2026-09-24-lion-head-hill/index.html">新店小獅頭山走讀</a><a href="../stories/2026-09-24-cliff-buddha/index.html">獅山腰的大佛</a><a href="../stories/2026-09-24-guangming-temple/index.html">廣明禪寺</a><a href="../stories/2026-09-24-binlangkeng-creek/index.html">檳榔坑溪</a><a href="../stories/guangqin-monk-path/index.html">廣欽老和尚修行路</a></div></details><details name="mobile-section"><summary>瑠公圳漫步</summary><div class="submenu"><a href="../liugong/index.html">查看單元｜瑠公圳漫步</a><a href="../stories/2026-10-01-liugong-lixing-settlement/index.html">瑠公圳力行聚落踏查紀錄</a><a href="../stories/2026-10-01-liugong-canal-walk/index.html">瑠公圳漫步</a><a href="../stories/2026-10-01-liugong-field-notes/index.html">瑠公圳走讀</a></div></details><details name="mobile-section"><summary>圳水川流 孕育大地</summary><div class="submenu"><a href="../dapinglin/index.html">查看單元｜圳水川流 孕育大地</a><a href="../stories/2026-10-08-dapinglin-east-west-canals/index.html">大坪林圳東西幹線</a></div></details><details name="mobile-section"><summary>彼此相顧 激發愛心</summary><div class="submenu"><a href="../care/index.html">查看單元｜彼此相顧 激發愛心</a><a href="../stories/2026-10-31-spiritual-cartographer/index.html">靈性製圖師的25年軌跡</a><a href="../stories/2026-10-29-shumin-inventory-and-stories/index.html">德華女子公寓</a><a href="../stories/2026-11-01-holy-trinity-to-dehua-womens-dorm/index.html">在歲月裂縫中種植光明：從聖三堂到德華女子公寓</a></div></details></nav></details>
     </div>
   </header>
   <div class="breadcrumb-bar">
