@@ -9,6 +9,7 @@
    ========================================================================== */
 
 :root {
+  color-scheme: light;
   /* 字體家族（搭配 font-display: swap 與系統備用字型） */
   --font-serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", "Apple LiSung", Georgia, serif;
   --font-sans: "Noto Sans TC", "Source Han Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;

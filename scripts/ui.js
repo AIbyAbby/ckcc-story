@@ -1,6 +1,5 @@
 /* ==========================================================================
    全站互動腳本（scripts/ui.js）
-   - 淺色／深色模式切換
    - A- / A / A+ 字級調整（記住使用者選擇）
    - 手機版「選單」開關
    - 頁首即時搜尋（含全部 12 篇故事、單元與地圖）
@@ -8,42 +7,13 @@
    ========================================================================== */
 
 (function () {
-  const THEME_KEY = 'chufangjian-theme';
   const SCALE_KEY = 'chufangjian-font-scale';
   const SCALES = { sm: '0.9', md: '1', lg: '1.15' };
 
   const root = document.documentElement;
-  const themeBtn = document.getElementById('theme-toggle');
   const navToggle = document.getElementById('nav-toggle');
   const siteNav = document.getElementById('site-nav');
   const fontBtns = document.querySelectorAll('[data-font-size]');
-
-  function getPreferredTheme() {
-    const saved = localStorage.getItem(THEME_KEY);
-    if (saved === 'light' || saved === 'dark') return saved;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light';
-  }
-
-  function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    if (themeBtn) {
-      const isDark = theme === 'dark';
-      themeBtn.setAttribute('aria-pressed', String(isDark));
-      themeBtn.textContent = isDark ? '淺色' : '深色';
-      themeBtn.setAttribute('aria-label', isDark ? '切換為淺色閱讀模式' : '切換為深色閱讀模式');
-    }
-  }
-
-  applyTheme(getPreferredTheme());
-  if (themeBtn) {
-    themeBtn.addEventListener('click', function () {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      localStorage.setItem(THEME_KEY, next);
-      applyTheme(next);
-    });
-  }
 
   function applyFontScale(sizeKey) {
     const key = SCALES[sizeKey] ? sizeKey : 'md';
