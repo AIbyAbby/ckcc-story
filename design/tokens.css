@@ -11,7 +11,7 @@
 :root {
   --site-reading-heading: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem);
   --reading-card-surface: #fff;
-  --site-reading-size: clamp(1.0625rem, 1.02rem + 0.2vw, 1.1875rem);
+  --site-reading-size: clamp(1.125rem, 1.02rem + 0.2vw, 1.1875rem);
   color-scheme: light;
   /* 字體家族（搭配 font-display: swap 與系統備用字型） */
   --font-serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", "Apple LiSung", Georgia, serif;

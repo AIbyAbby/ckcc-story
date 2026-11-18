@@ -23,7 +23,13 @@
     });
   }
 
-  applyFontScale(localStorage.getItem(SCALE_KEY) || 'md');
+  let savedScale = 'md';
+  try {
+    savedScale = localStorage.getItem(SCALE_KEY) || 'md';
+  } catch {
+    // Reading controls still work when browser storage is unavailable.
+  }
+  applyFontScale(savedScale);
   fontBtns.forEach(function (btn) {
     btn.addEventListener('click', function () {
       const sizeKey = btn.getAttribute('data-font-size') || 'md';
@@ -32,7 +38,41 @@
     });
   });
 
+  const banner = document.getElementById('home-banner-video');
+  const bannerToggle = document.getElementById('banner-play-btn');
+  if (banner && bannerToggle) {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const syncBanner = function () {
+      if (reducedMotion.matches) banner.pause();
+      bannerToggle.hidden = reducedMotion.matches;
+      bannerToggle.textContent = banner.paused ? '播放動畫' : '暫停動畫';
+    };
+    bannerToggle.addEventListener('click', function () {
+      if (banner.paused) banner.play().catch(syncBanner);
+      else banner.pause();
+    });
+    banner.addEventListener('play', syncBanner);
+    banner.addEventListener('pause', syncBanner);
+    reducedMotion.addEventListener('change', syncBanner);
+    syncBanner();
+  }
+
+  const routeMapDialog = document.getElementById('route-map-dialog');
+  if (routeMapDialog && typeof routeMapDialog.showModal === 'function') {
+    const enlargedMap = routeMapDialog.querySelector('img');
+    document.querySelectorAll('.mymaps-image').forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+        event.preventDefault();
+        enlargedMap.src = link.href;
+        enlargedMap.alt = link.querySelector('img').alt;
+        routeMapDialog.showModal();
+      });
+    });
+  }
+
   if (navToggle && siteNav) {
+    root.classList.add('has-nav-menu');
     navToggle.addEventListener('click', function () {
       const isOpen = siteNav.classList.toggle('is-open');
       navToggle.setAttribute('aria-expanded', String(isOpen));

@@ -384,7 +384,32 @@ a:hover {
   padding-block: 4px;
 }
 
+.section-mobile-nav {
+  display: none;
+}
+
 @media (max-width: 959px) {
+  .has-nav-menu .section-mobile-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 6px;
+  }
+
+  .has-nav-menu .site-header--nav-only .site-nav:not(.is-open) {
+    display: none;
+  }
+
+  .has-nav-menu .site-header--nav-only .site-nav.is-open .nav-list {
+    flex-direction: column;
+    max-height: 65vh;
+    overflow-y: auto;
+  }
+
+  .has-nav-menu .site-header--nav-only .site-nav.is-open .nav-link {
+    white-space: normal;
+  }
+
   .site-header--nav-only .nav-list {
     flex-direction: row;
     overflow-x: auto;

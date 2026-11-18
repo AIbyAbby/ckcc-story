@@ -478,7 +478,7 @@
 .prose-text a { overflow-wrap: anywhere; }
 .site-header--article :is(a, button):focus-visible,
 .article-end a:focus-visible { outline: 3px solid var(--focus-ring); outline-offset: 2px; }
-@media (max-width: 640px) {
+@media (max-width: 959px) {
   .article-mobile-nav { display: flex; justify-content: space-between; padding-block: 6px; }
   .article-mobile-nav .article-return-link { min-width: 0; }
   .article-mobile-nav .nav-toggle { flex: none; }
@@ -502,7 +502,7 @@
 .article-body-wrap .col-main,
 .page-section .prose-flow,
 .page-hero__inner {
-  padding: clamp(20px, 4vw, 48px);
+  padding: clamp(16px, 4vw, 48px);
   border: 1px solid var(--line-hairline);
   border-radius: 0.75rem;
   background: var(--reading-card-surface);

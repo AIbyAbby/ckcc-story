@@ -18,6 +18,10 @@
 
   <header class="site-header site-header--nav-only">
     <div class="container">
+      <div class="section-mobile-nav">
+        <a class="nav-link" href="../index.html">首頁</a>
+        <button id="nav-toggle" class="tool-btn tool-btn--outline" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      </div>
       <nav id="site-nav" class="site-nav" aria-label="主導覽列">
         <ul class="nav-list">
           <li><a class="nav-link" href="../index.html">首頁</a></li>
@@ -61,7 +65,7 @@
             </a>
             <h3>獅頭是火山 天機活潑 淡地第一名山</h3>
             <p>捷運新店站－大坪林圳－獅頭山腳－檳榔路－振山煤礦－檳榔坑頭福德宮對談分享</p>
-            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1FZVVkeUxcEvnbzmh52Qi-C_th_nBwDs&amp;usp=sharing" aria-label="查看獅頭是火山 天機活潑 淡地第一名山的地圖">查看地圖 <span aria-hidden="true">→</span></a>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1FZVVkeUxcEvnbzmh52Qi-C_th_nBwDs&amp;usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖開啟獅頭是火山 天機活潑 淡地第一名山（另開分頁）">在 Google 地圖開啟 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <a class="mymaps-image" href="../images/route-maps/02-liugong.webp" aria-label="放大查看瑠公圳漫步路線圖">
@@ -69,7 +73,7 @@
             </a>
             <h3>瑠公圳漫步</h3>
             <p>捷運新店站－瑠公圳頭－力行營區－圳邊90歲的黃媽媽一起同樂彼此分享圳邊生活點滴</p>
-            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1o2j8glr1jot23a9c39WhbZF_twzIvsA&amp;usp=sharing" aria-label="查看瑠公圳漫步的地圖">查看地圖 <span aria-hidden="true">→</span></a>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1o2j8glr1jot23a9c39WhbZF_twzIvsA&amp;usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖開啟瑠公圳漫步（另開分頁）">在 Google 地圖開啟 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <a class="mymaps-image" href="../images/route-maps/03-dapinglin.webp" aria-label="放大查看圳水川流 孕育大地路線圖">
@@ -77,7 +81,7 @@
             </a>
             <h3>圳水川流 孕育大地</h3>
             <p>新店農會－大坪林圳12甲支圳－環河路－大宅庒－白馬寺、乾溪－在耆老的農田中分享農耕、水圳與生活記憶</p>
-            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1xvpzxBUM3dpLf9vcRErfEWmsT27fgmE&amp;usp=sharing" aria-label="查看圳水川流 孕育大地的地圖">查看地圖 <span aria-hidden="true">→</span></a>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1xvpzxBUM3dpLf9vcRErfEWmsT27fgmE&amp;usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖開啟圳水川流 孕育大地（另開分頁）">在 Google 地圖開啟 <span aria-hidden="true">→</span></a>
           </li>
           <li class="mymaps-item">
             <a class="mymaps-image" href="../images/route-maps/04-care.webp" aria-label="放大查看彼此相顧，激發愛心路線圖">
@@ -85,12 +89,17 @@
             </a>
             <h3>彼此相顧，激發愛心</h3>
             <p>北新藝術廣場－瑠公圳－瑠公圳第一水閘門－大坪林市場－聖三堂－與教友們陪伴與照顧對話</p>
-            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1CFP_uu7Cpxm-jynH6ZqJ6WKCrr0kgJo&amp;usp=sharing" aria-label="查看彼此相顧，激發愛心的地圖">查看地圖 <span aria-hidden="true">→</span></a>
+            <a class="action-btn action-btn--primary" href="https://www.google.com/maps/d/viewer?mid=1CFP_uu7Cpxm-jynH6ZqJ6WKCrr0kgJo&amp;usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="在 Google 地圖開啟彼此相顧，激發愛心（另開分頁）">在 Google 地圖開啟 <span aria-hidden="true">→</span></a>
           </li>
         </ul>
       </div>
     </section>
   </main>
+
+  <dialog class="route-map-dialog" id="route-map-dialog" aria-label="路線圖放大檢視">
+    <form method="dialog"><button class="action-btn" type="submit">關閉</button></form>
+    <img alt="">
+  </dialog>
 
   <script src="../scripts/ui.js"></script>
 </body>
