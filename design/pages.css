@@ -7,8 +7,6 @@
 }
 
 .page-hero__inner {
-  max-width: 1000px;
-  margin-inline: auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;

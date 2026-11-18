@@ -134,7 +134,6 @@
   .col-main {
     grid-column: 1 / -1;
     width: 100%;
-    max-width: 820px;
     margin-inline: auto;
   }
 }
@@ -189,11 +188,6 @@
 }
 
 /* 文章內文區 */
-.prose-flow {
-  max-width: 820px;
-  margin-inline: auto;
-}
-
 .prose-text {
   max-width: var(--prose-max-ch);
   margin-bottom: var(--space-5);
@@ -494,8 +488,22 @@
 
 .reading-card,
 .article-header > .container {
-  width: calc(100% - 40px);
-  max-width: 1000px;
+  width: calc(min(100%, var(--container-max)) - 40px);
+}
+
+@media (min-width: 960px) {
+  .reading-card,
+  .article-header > .container {
+    width: calc(min(100%, var(--container-max)) - 64px);
+  }
+}
+
+.article-body-wrap :is(.story-figure, .story-video-wrap, .story-table-wrap, .article-end) {
+  margin-inline: auto;
+}
+
+.article-body-wrap :is(.story-video-wrap, .story-table-wrap) {
+  max-width: 820px;
 }
 
 .article-header {
