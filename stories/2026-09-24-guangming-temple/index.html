@@ -9,9 +9,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../../design/tokens.css">
-  <link rel="stylesheet" href="../../design/base.css">
+  <link rel="stylesheet" href="../../design/base.css?v=school-brand">
   <link rel="stylesheet" href="../../design/pages.css">
-  <link rel="stylesheet" href="../../design/article.css">
+  <link rel="stylesheet" href="../../design/article.css?v=school-brand">
   <script>document.documentElement.classList.add("has-js");</script>
 </head>
 <body data-base="../../">
@@ -19,10 +19,9 @@
 
   <header class="site-header site-header--nav-only site-header--article">
     <div class="container">
-      <div class="article-mobile-nav">
-        <a class="action-btn article-return-link" href="../../shishan/index.html">← 獅頭是火山 天機活潑</a>
-        <button id="nav-toggle" class="tool-btn tool-btn--outline" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
-      </div>
+      <a class="site-brand" href="../../index.html"><img src="../../images/ckcc-logo.png" alt="" width="36" height="36"><span>新北市新店崇光社區大學</span></a>
+      <button id="nav-toggle" class="tool-btn tool-btn--outline site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">選單</button>
+      <a class="action-btn article-return-link site-unit-return" href="../../shishan/index.html">← 獅頭是火山 天機活潑</a>
       <nav id="site-nav" class="site-nav" aria-label="主導覽列">
         <ul class="nav-list">
           <li><a class="nav-link" href="../../index.html">首頁</a></li>
