@@ -3,7 +3,7 @@
    - A- / A / A+ 字級調整（記住使用者選擇）
    - 手機版「選單」開關
    - 頁首即時搜尋（含全部 12 篇故事、單元與地圖）
-   - 文章頁：複製連結、列印、圖片點開放大燈箱、本頁目錄高亮、回到頂部
+   - 文章頁：複製連結、列印、圖片點開放大燈箱、本頁目錄高亮
    ========================================================================== */
 
 (function () {
@@ -122,15 +122,10 @@
     });
   }
 
-  // 回到頂部＋本頁目錄當前章節
-  const backToTop = document.getElementById('back-to-top');
+  // 本頁目錄當前章節
   const tocLinks = document.querySelectorAll('.page-toc__link');
 
   function handleScroll() {
-    if (backToTop) {
-      backToTop.hidden = window.scrollY < 420;
-    }
-
     if (tocLinks.length > 0) {
       let currentId = '';
       tocLinks.forEach(function (link) {
@@ -144,12 +139,6 @@
         link.classList.toggle('is-active', link.getAttribute('href') === '#' + currentId);
       });
     }
-  }
-
-  if (backToTop) {
-    backToTop.addEventListener('click', function () {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
   }
 
   window.addEventListener('scroll', handleScroll, { passive: true });

@@ -570,34 +570,6 @@ a:hover {
 }
 
 /* --------------------------------------------------------------------------
-   回到頂部按鈕（長文與多屏瀏覽用）
-   -------------------------------------------------------------------------- */
-.back-to-top {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  z-index: 90;
-  font-family: var(--font-sans);
-  font-size: var(--text-caption);
-  font-weight: 700;
-  min-height: var(--tap-mobile);
-  padding: 0 16px;
-  background: var(--bg-surface);
-  color: var(--river-blue);
-  border: 1.5px solid var(--river-blue);
-  cursor: pointer;
-}
-
-.back-to-top[hidden] {
-  display: none;
-}
-
-.back-to-top:hover {
-  background: var(--river-blue);
-  color: var(--bg-paper);
-}
-
-/* --------------------------------------------------------------------------
    頁尾（網站導覽、撰稿志工、資料來源、聯絡方式）
    -------------------------------------------------------------------------- */
 .site-footer {
@@ -679,7 +651,6 @@ a:hover {
   .article-actions,
   .col-toc,
   .article-end,
-  .back-to-top,
   .site-footer,
   .skip-link {
     display: none !important;

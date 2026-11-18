@@ -190,6 +190,8 @@
   color: var(--ink-secondary);
   font-size: var(--text-ui);
   line-height: 1.85;
+  line-break: strict;
+  text-wrap: pretty;
   flex: 1;
 }
 

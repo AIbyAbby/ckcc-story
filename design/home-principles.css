@@ -1,6 +1,6 @@
 .home-principles {
-  --caption-size: clamp(1.0625rem, 1.4vw, 1.125rem);
-  --caption-color: #3f4a47;
+  --caption-size: 1rem;
+  --caption-color: #5b6862;
   --caption-divider: #e4e9e6;
   --principles-paper: #fff;
   padding-block: clamp(24px, 1.9vw, 36px) clamp(32px, 2.6vw, 48px);
@@ -42,8 +42,8 @@
   font-family: var(--sans);
   font-size: var(--caption-size);
   font-weight: 400;
-  line-height: 1.85;
-  letter-spacing: 0.025em;
+  line-height: 1.7;
+  letter-spacing: 0.015em;
   color: var(--caption-color);
   text-align: left;
   text-wrap: pretty;
@@ -60,11 +60,5 @@
     grid-template-columns: repeat(4, minmax(11rem, 1fr));
     overflow-x: auto;
     padding-bottom: 12px;
-  }
-}
-
-@media (max-width: 640px) {
-  .home-principles {
-    --caption-size: clamp(1rem, 2.7vw, 1.0625rem);
   }
 }
