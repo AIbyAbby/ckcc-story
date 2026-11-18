@@ -447,8 +447,6 @@
 
 /* Article navigation and reading controls */
 .article-mobile-nav { display: none; }
-.reading-controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-block: 8px; }
-.reading-controls .tool-btn,
 .article-return .action-btn,
 .article-mobile-nav .tool-btn,
 .article-return-link { min-height: 44px; min-width: 44px; }
