@@ -9,9 +9,10 @@
    ========================================================================== */
 
 :root {
-  --site-reading-heading: clamp(1.25rem, 1.125rem + 0.5vw, 1.5rem);
+  --site-content-max: 1000px;
+  --site-reading-heading: clamp(1.5rem, 1.3rem + 1vw, 2rem);
   --reading-card-surface: #fff;
-  --site-reading-size: clamp(1.125rem, 1.02rem + 0.2vw, 1.1875rem);
+  --site-reading-size: 1.125rem;
   color-scheme: light;
   /* 字體家族（搭配 font-display: swap 與系統備用字型） */
   --font-serif: "Noto Serif TC", "Source Han Serif TC", "PMingLiU", "Apple LiSung", Georgia, serif;
@@ -79,6 +80,10 @@
 }
 
 /* 深色模式：獨立調校的夜讀墨紙色，非單純色彩反轉 */
+@media (min-width: 768px) {
+  :root { --site-reading-size: 1.25rem; }
+}
+
 [data-theme="dark"] {
   --reading-card-surface: var(--bg-surface);
   --bg-paper: #141B1E;        /* 深墨青夜紙 */
