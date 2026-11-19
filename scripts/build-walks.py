@@ -14,18 +14,30 @@ header = header.replace('href="walks/index.html"', 'href="walks/index.html" aria
 header = re.sub(r'(href|src)="(?!https?:|#)([^"]+)"', r'\1="../\2"', header)
 
 def collage(items, label):
-    figures = []
-    for index, photo in enumerate(items):
-        responsive = ''
-        if 'small_file' in photo:
-            sizes = '(max-width: 640px) calc(100vw - 72px), 920px' if index == 0 else '(max-width: 640px) calc(100vw - 72px), (max-width: 900px) 400px, 300px'
-            responsive = f' srcset="../{photo["small_file"]} {photo["small_width"]}w, ../{photo["file"]} {photo["width"]}w" sizes="{sizes}"'
-        figures.append(
-            f'<figure class="walks-photo"><img src="../{escape(photo["file"])}"{responsive} '
-            f'width="{photo["width"]}" height="{photo["height"]}" '
-            f'alt="{escape(photo["alt"])}" loading="lazy" decoding="async"></figure>'
-        )
-    return f'<div class="walks-collage" role="group" aria-label="{escape(label)}">' + '\n'.join(figures) + '</div>'
+    panels = []
+    offset = 0
+    while offset < len(items):
+        # A portrait at the fourth position can occupy the tall side slot.
+        remaining = items[offset:]
+        tall = len(remaining) >= 4 and remaining[3]['height'] > remaining[3]['width'] * 1.15
+        count = min(4 if tall else 5, len(remaining))
+        group = remaining[:count]
+        figures = []
+        for index, photo in enumerate(group):
+            responsive = ''
+            if 'small_file' in photo:
+                sizes = '(max-width: 640px) calc(100vw - 72px), (max-width: 900px) 420px, 460px' if index == 0 else '(max-width: 640px) calc(100vw - 72px), (max-width: 900px) 300px, 230px'
+                responsive = f' srcset="../{photo["small_file"]} {photo["small_width"]}w, ../{photo["file"]} {photo["width"]}w" sizes="{sizes}"'
+            figures.append(
+                f'<figure class="walks-photo"><img src="../{escape(photo["file"])}"{responsive} '
+                f'width="{photo["width"]}" height="{photo["height"]}" '
+                f'alt="{escape(photo["alt"])}" loading="lazy" decoding="async"></figure>'
+            )
+        mirror = ' walks-panel--mirror' if len(panels) % 2 else ''
+        portrait = ' walks-panel--tall' if tall else ''
+        panels.append(f'<div class="walks-panel walks-panel--{count}{mirror}{portrait}">' + '\n'.join(figures) + '</div>')
+        offset += count
+    return f'<div class="walks-collage" role="group" aria-label="{escape(label)}">' + '\n'.join(panels) + '</div>'
 
 chapters = []
 for number, chapter in enumerate(data['chapters'], 1):
@@ -48,7 +60,7 @@ html = f'''<!doctype html>
 <title>現場走讀｜里里有故事 × 樂齡友善處方箋</title>
 <meta name="description" content="{escape(data['intro'])}">
 <link rel="stylesheet" href="../design/home-layout.css?v=walks">
-<link rel="stylesheet" href="../design/walks.css?v=1">
+<link rel="stylesheet" href="../design/walks.css?v=asymmetric-2">
 </head><body>{header}
 <main id="main" class="walks-page"><div class="wrap">
 <div class="walks-breadcrumb"><a href="../index.html">首頁</a> &gt; 現場走讀</div>
