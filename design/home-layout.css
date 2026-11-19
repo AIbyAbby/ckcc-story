@@ -173,6 +173,7 @@ header{background:white;color:var(--ink);box-shadow:0 2px 6px #24333212;position
   line-height: 1.85;
   text-wrap: pretty;
 }
+.home-fieldwork__mentor { font-size: 1.1em; font-weight: 700; }
 .home-course-cards .card { background: #f2eadb; }
 .home-course-cards .card img { height: auto; aspect-ratio: 16/9; object-fit: cover; }
 .home-course-cards .copy { gap: 1rem; padding: clamp(24px, 3vw, 32px); }
