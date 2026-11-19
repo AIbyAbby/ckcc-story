@@ -41,11 +41,9 @@ def collage(items, label):
 
 chapters = []
 for number, chapter in enumerate(data['chapters'], 1):
-    parts = []
-    for group in (1, 2):
-        selected = [p for p in photos if p['unit'] == number and p['group'] == group]
-        parts.append(f'<p class="walks-prose">{escape(chapter["paragraphs"][group - 1])}</p>')
-        parts.append(collage(selected, chapter['title'] + ('同行與觀察' if group == 1 else '交流與傾聽')))
+    selected = [p for group in (1, 2) for p in photos if p['unit'] == number and p['group'] == group]
+    prose = ''.join(chapter['paragraphs'])
+    parts = [f'<p class="walks-prose">{escape(prose)}</p>', collage(selected, chapter['title'] + '走讀照片')]
     chapters.append(
         f'<section class="walks-chapter" id="walk-{number}" aria-labelledby="walk-title-{number}">'
         f'<h2 id="walk-title-{number}"><span class="home-course-cards__date home-course-cards__date--badge">'
