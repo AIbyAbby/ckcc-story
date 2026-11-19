@@ -18,7 +18,8 @@ def collage(items, label):
     offset = 0
     while offset < len(items):
         remaining = items[offset:]
-        count = min(5, len(remaining))
+        triple_portrait = items[0]['unit'] == 3 and len(remaining) >= 6 and all(p['height'] > p['width'] * 1.15 for p in remaining[:3])
+        count = min(6 if triple_portrait else 5, len(remaining))
         group = remaining[:count]
         figures = []
         for index, photo in enumerate(group):

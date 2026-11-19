@@ -1800,5 +1800,66 @@
     "role": "scenery",
     "small_file": "images/walks/scenery-4-033-small.webp",
     "small_width": 600
+  },
+  {
+    "unit": 3,
+    "index": 6,
+    "id": "1fJqDd-n4TMjVLSCc-luzM_IyfPG7IwZM",
+    "group": 2,
+    "file": "images/walks/scenery-3-006.webp",
+    "width": 1200,
+    "height": 900,
+    "alt": "街區中的小橋與水道",
+    "role": "scenery",
+    "small_file": "images/walks/scenery-3-006-small.webp",
+    "small_width": 600
+  },
+  {
+    "unit": 3,
+    "index": 19,
+    "id": "1K0LrIv5y5rwszVQyAKDm_ua0lvVxfFDn",
+    "group": 2,
+    "file": "images/walks/scenery-3-019.webp",
+    "width": 900,
+    "height": 1200,
+    "alt": "廟宇入口與周邊巷道",
+    "role": "scenery",
+    "small_file": "images/walks/scenery-3-019-small.webp",
+    "small_width": 600
+  },
+  {
+    "unit": 3,
+    "index": 24,
+    "id": "1o1XFqEdDPGTbBVCpWVAceZcmiAITdCMn",
+    "group": 2,
+    "file": "images/walks/scenery-3-024.webp",
+    "width": 900,
+    "height": 1200,
+    "alt": "高樓之間保留的圳道",
+    "role": "scenery",
+    "small_file": "images/walks/scenery-3-024-small.webp",
+    "small_width": 600
+  },
+  {
+    "unit": 3,
+    "index": 37,
+    "id": "128UYGWrXLL4LNRLX87fazkJ0_0PouBKW",
+    "group": 2,
+    "file": "images/walks/scenery-3-037.webp",
+    "width": 554,
+    "height": 1200,
+    "alt": "街巷旁的水圳與房屋",
+    "role": "scenery"
+  },
+  {
+    "unit": 3,
+    "index": 44,
+    "id": "1dTO_fm2aNnM6H6E4eZd5akveVkJM6LmQ",
+    "group": 2,
+    "file": "images/walks/scenery-3-044.webp",
+    "width": 554,
+    "height": 1200,
+    "alt": "水面映照周邊的高樓與樹木",
+    "role": "scenery"
   }
 ]

@@ -52,6 +52,9 @@
 .walks-panel--portrait-lead.walks-panel--mirror .walks-photo:nth-child(3) { grid-area: 1 / 2 / 2 / 3; }
 .walks-panel--portrait-lead.walks-panel--mirror .walks-photo:nth-child(4) { grid-area: 2 / 1 / 3 / 2; }
 .walks-panel--portrait-lead.walks-panel--mirror .walks-photo:nth-child(5) { grid-area: 2 / 2 / 3 / 3; }
+.walks-panel.walks-panel--6 { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: auto auto; aspect-ratio: auto; }
+.walks-panel.walks-panel--6 .walks-photo { grid-area: auto; aspect-ratio: 4 / 3; }
+.walks-panel.walks-panel--6 .walks-photo:nth-child(-n+3) { aspect-ratio: 3 / 4; }
 .walks-chapter .walks-collage:last-of-type { margin-bottom: 1.5rem; }
 .walks-unit-link { display: inline-flex; align-items: center; min-height: 44px; padding-block: .5rem; text-underline-offset: .25em; }
 .walks-breadcrumb { margin-bottom: 1.5rem; }
@@ -61,4 +64,5 @@
 @media (max-width: 640px) {
   .walks-panel { display: flex; flex-direction: column; gap: 12px; aspect-ratio: auto; max-width: none; margin-bottom: 24px; }
   .walks-photo img { height: auto; }
+  .walks-panel.walks-panel--6 .walks-photo { aspect-ratio: auto; }
 }
