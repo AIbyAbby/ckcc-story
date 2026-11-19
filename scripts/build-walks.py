@@ -17,10 +17,8 @@ def collage(items, label):
     panels = []
     offset = 0
     while offset < len(items):
-        # A portrait at the fourth position can occupy the tall side slot.
         remaining = items[offset:]
-        tall = len(remaining) >= 4 and remaining[3]['height'] > remaining[3]['width'] * 1.15
-        count = min(4 if tall else 5, len(remaining))
+        count = min(5, len(remaining))
         group = remaining[:count]
         figures = []
         for index, photo in enumerate(group):
@@ -34,7 +32,7 @@ def collage(items, label):
                 f'alt="{escape(photo["alt"])}" loading="lazy" decoding="async"></figure>'
             )
         mirror = ' walks-panel--mirror' if len(panels) % 2 else ''
-        portrait = ' walks-panel--tall' if tall else ''
+        portrait = ' walks-panel--portrait-lead' if group[0]['height'] > group[0]['width'] * 1.15 else ''
         panels.append(f'<div class="walks-panel walks-panel--{count}{mirror}{portrait}">' + '\n'.join(figures) + '</div>')
         offset += count
     return f'<div class="walks-collage" role="group" aria-label="{escape(label)}">' + '\n'.join(panels) + '</div>'
@@ -51,7 +49,6 @@ for number, chapter in enumerate(data['chapters'], 1):
         + '\n'.join(parts)
         + f'<a class="walks-unit-link" href="../{chapter["unit"]}/index.html">閱讀這次走讀的文章 →</a></section>'
     )
-links = ''.join(f'<a href="#walk-{i}">{c["date"]} {escape(c["title"])}</a>' for i, c in enumerate(data['chapters'], 1))
 html = f'''<!doctype html>
 <html lang="zh-Hant-TW"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -63,7 +60,7 @@ html = f'''<!doctype html>
 <main id="main" class="walks-page"><div class="wrap">
 <div class="walks-breadcrumb"><a href="../index.html">首頁</a> &gt; 現場走讀</div>
 <section class="walks-opening" aria-labelledby="walks-title"><h1 id="walks-title">{escape(data['title'])}</h1>
-<p>{escape(data['intro'])}</p><nav class="walks-chapters-nav" aria-label="四次走讀">{links}</nav></section>
+<p>{escape(data['intro'])}</p></section>
 {''.join(chapters)}
 <a class="walks-unit-link" href="../index.html">← 回首頁</a>
 </div></main></body></html>'''
