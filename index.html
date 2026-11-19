@@ -78,7 +78,7 @@
 <span class="read">查看單元</span>
 </div></article>
 <article class="card">
-<img src="images/unit-covers/unit-3-dapinglin.webp" alt="">
+<img src="images/unit-covers/unit-3-field-interview.webp" alt="走讀成員與居民在農田旁圍坐訪談" loading="lazy">
 <div class="copy">
 <h3 id="course-dapinglin-title"><a class="home-course-cards__heading--badge" href="dapinglin/index.html"><span class="home-course-cards__date home-course-cards__date--badge">10/08</span><span>圳水川流 孕育大地</span></a></h3>
 <p class="home-course-cards__route">新店農會－大坪林圳12甲支圳－環河路－大宅庒－白馬寺、乾溪－在耆老的農田中分享農耕、水圳與生活記憶</p>
@@ -119,4 +119,22 @@
   </section>
 </div>
 </main>
+<script>
+(() => {
+  const video = document.getElementById('home-banner-video');
+  const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const resume = () => {
+    if (!video || motion.matches || document.hidden) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  };
+  window.addEventListener('pageshow', resume);
+  document.addEventListener('visibilitychange', resume);
+  motion.addEventListener('change', () => motion.matches ? video.pause() : resume());
+  new IntersectionObserver(entries => {
+    if (entries.some(entry => entry.isIntersecting)) resume();
+  }).observe(video);
+  resume();
+})();
+</script>
 </body></html>
