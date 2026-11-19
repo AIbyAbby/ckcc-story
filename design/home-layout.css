@@ -166,6 +166,51 @@ header{background:white;color:var(--ink);box-shadow:0 2px 6px #24333212;position
 }
 
 /* 首頁末端：受訪者致謝與計畫團隊。 */
+.home-fieldwork {
+  margin-bottom: clamp(24px, 4vw, 48px);
+  padding: clamp(24px, 4vw, 48px);
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: .75rem;
+  color: #3f4f4b;
+  text-align: left;
+}
+.home-fieldwork > h2 {
+  margin: 0 0 1.5rem;
+  color: #234f56;
+  font: 700 clamp(1.5rem, 1.3rem + 1vw, 2rem)/1.4 var(--sans);
+  text-align: center;
+  text-wrap: balance;
+}
+.home-fieldwork__intro {
+  max-width: 38em;
+  margin: 0 auto 2rem;
+  font-size: 1.125rem;
+  line-height: 1.85;
+  text-wrap: pretty;
+}
+.home-fieldwork__list { margin: 0; padding: 0; list-style: none; }
+.home-fieldwork__list > li {
+  display: grid;
+  grid-template-columns: 8em minmax(0, 1fr);
+  gap: clamp(16px, 3vw, 32px);
+  padding-block: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.home-fieldwork__list > li:last-child { padding-bottom: 0; }
+.home-fieldwork__when { display: flex; flex-direction: column; gap: .25rem; font-variant-numeric: tabular-nums; }
+.home-fieldwork__when span:first-child { color: #234f56; font-weight: 600; }
+.home-fieldwork__details { min-width: 0; }
+.home-fieldwork__details h3 { margin: 0 0 .75rem; color: #234f56; font: 600 1.25rem/1.5 var(--sans); text-align: left; }
+.home-fieldwork__details p { margin: 0 0 .75rem; font-size: 1.0625rem; line-height: 1.85; text-wrap: pretty; line-break: strict; overflow-wrap: anywhere; }
+.home-fieldwork__details .home-fieldwork__teacher { margin: 0; font-size: 1rem; }
+@media (min-width: 768px) {
+  .home-fieldwork__intro { font-size: 1.25rem; }
+}
+@media (max-width: 640px) {
+  .home-fieldwork__list > li { grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+  .home-fieldwork__when { flex-direction: row; flex-wrap: wrap; gap: .5rem 1rem; }
+}
 .home-credits {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
