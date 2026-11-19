@@ -215,48 +215,38 @@ header{background:white;color:var(--ink);box-shadow:0 2px 6px #24333212;position
   .home-fieldwork__intro { font-size: 1.25rem; }
 }
 .home-credits {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  padding-bottom: clamp(40px, 6vw, 72px);
-}
-.home-credits__card {
-  min-width: 0;
-  padding: clamp(24px, 3vw, 36px);
+  margin-bottom: clamp(32px, 5vw, 64px);
+  padding: clamp(24px, 5vw, 64px);
   border: 1px solid #c6cfca;
   border-radius: .75rem;
-  color: #3f4f4b;
+  background: linear-gradient(#ffffff73, #ffffffa6), url("../images/banner/credits-watercolor-lake.webp") center / cover no-repeat;
+  color: #344d47;
   font-size: 1.0625rem;
   line-height: 1.85;
   text-align: left;
   line-break: strict;
   overflow-wrap: anywhere;
 }
-.home-credits__card--thanks { background: #e9f0e9; }
-.home-credits__card--team { background: #f2eadb; }
-.home-credits__card h2 {
+.home-credits__content { max-width: 38em; margin-inline: auto; }
+.home-credits h2 {
   margin: 0 0 1.5rem;
   color: #234f56;
   font: 700 clamp(1.5rem, 1.3rem + 1vw, 2rem)/1.4 var(--sans);
-  text-align: center;
+  text-align: left;
   text-wrap: balance;
 }
-.home-credits__card p { margin: 0 0 1.25rem; text-wrap: pretty; }
-.home-credits__people { margin: 1.5rem 0 0; padding: 0; list-style: none; }
-.home-credits__people li + li { margin-top: .75rem; }
+.home-credits h3 { margin: 0 0 1rem; color: #234f56; font: 600 1.25rem/1.5 var(--sans); text-align: left; }
+.home-credits p { margin: 0 0 1.25rem; text-wrap: pretty; }
+.home-credits__project { font-size: 1.125rem; }
 .home-credits__funding { font-size: 1rem; }
-.home-credits__roles { margin: 1.5rem 0; }
-.home-credits__roles > div {
-  display: grid;
-  grid-template-columns: minmax(0, 10em) minmax(0, 1fr);
-  gap: .75rem;
-  padding-block: .5rem;
-  border-bottom: 1px solid #d8d0c1;
-}
+.home-credits__section { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #b5c6be; }
+.home-credits__people { margin: 1.5rem 0 0; padding: 0; list-style: none; }
+.home-credits__people li + li { margin-top: .5rem; }
+.home-credits__roles { margin: 0 0 1.5rem; }
+.home-credits__roles > div { display: grid; grid-template-columns: minmax(0, 11em) minmax(0, 1fr); gap: 1rem; padding-block: .375rem; }
 .home-credits__roles dt, .home-credits__roles dd { margin: 0; }
 .home-credits__members span { display: block; margin-bottom: .5rem; }
-.home-credits__card .home-credits__members { margin-bottom: 0; }
-@media (max-width: 767px) {
-  .home-credits { grid-template-columns: minmax(0, 1fr); }
-  .home-credits__roles > div { grid-template-columns: minmax(0, 1fr); gap: .125rem; }
+.home-credits .home-credits__members { margin-bottom: 0; }
+@media (max-width: 640px) {
+  .home-credits__roles > div { grid-template-columns: minmax(0, 1fr); gap: .125rem; padding-block: .5rem; }
 }
