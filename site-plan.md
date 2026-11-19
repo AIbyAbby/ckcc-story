@@ -1,5 +1,13 @@
 # 網站架構與設計紀錄（site-plan.md）
 
+## 現場走讀分頁
+
+- 新增 `walks/index.html`，主標「把課堂帶進風景裡」，按四次課程順序編排。
+- 每次課程採文章、照片拼貼、文章、照片拼貼；日期沿用首頁淡青綠圓標，不加直槓。
+- 本輪僅收錄有人物的現場照片，保留原始比例；純景物、地圖與翻拍資料不納入。
+- 文案來源為 `content/walks.json`，照片清單為 `content/walks-photos.json`；使用 `scripts/build-walks.py` 產生頁面。
+- 入口位於全站「社區盤點與實地踏查」選單下的「現場走讀」。
+
 - **技術架構**：純靜態 HTML / CSS / JS（無資料庫與建置工具），搭配 Leaflet + OpenStreetMap（`data/stops.json`）與站內搜尋篩選（`scripts/ui.js`、`scripts/stories-filter.js`）。
 - **色彩與字體（`design/tokens.css`）**：
   - 淺色：淡青灰紙底 `#F2F4F2`、墨藍灰字 `#1E2B33`、溪水藍 `#1D5E7A`、燈籠琥珀重點 `#B4650E`。
