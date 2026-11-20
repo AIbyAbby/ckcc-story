@@ -574,3 +574,7 @@ h1.prose-section-title,
   line-height: 1.65;
   color: var(--ink-secondary);
 }
+.story-reading-quiz { margin-block: 2rem; padding: clamp(20px, 4vw, 32px); border: 1px solid #c6cfca; border-radius: .75rem; background: #edf2e9; text-align: left; }
+.story-reading-quiz h2 { margin: 0 0 1rem; color: #234f56; font: 600 1.5rem/1.5 var(--font-sans); text-align: center; }
+.story-reading-quiz p { margin: 0 0 1.25rem; }
+.story-reading-quiz .action-btn { white-space: normal; min-height: 44px; }
