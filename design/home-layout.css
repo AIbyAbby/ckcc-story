@@ -251,3 +251,22 @@ header{background:white;color:var(--ink);box-shadow:0 2px 6px #24333212;position
 @media (max-width: 640px) {
   .home-credits__roles > div { grid-template-columns: minmax(0, 1fr); gap: .125rem; padding-block: .5rem; }
 }
+
+.home-credits__members { margin-top: 1.5rem; font-size: 1rem; }
+.home-credits__members > p { margin-bottom: .5rem; }
+.home-credits__members ul { display: flex; flex-wrap: wrap; margin: 0; padding: 0; list-style: none; }
+.home-credits__members li { white-space: nowrap; }
+.home-credits__members li:not(:last-child)::after { content: "、"; }
+
+.home-credits__names { display: flex; flex-wrap: wrap; }
+.home-credits__names .home-credits__name-row { display: inline; }
+.home-credits__name-row:first-child::after { content: "、"; }
+.home-credits__name-row > span { display: inline; white-space: nowrap; }
+@media (max-width: 640px) {
+  .home-credits__names { display: block; font-size: .875rem; }
+  .home-credits__names .home-credits__name-row { display: block; white-space: nowrap; }
+  .home-credits__name-row:first-child::after { content: ""; }
+}
+@media (max-width: 370px) { .home-credits__names .home-credits__name-row { white-space: normal; } }
+
+.home-credits__names span { margin: 0; }
